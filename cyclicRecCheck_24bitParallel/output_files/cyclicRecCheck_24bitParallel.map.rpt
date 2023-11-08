@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cyclicRecCheck_24bitParallel
-Mon Nov  6 17:27:05 2023
+Wed Nov  8 16:41:14 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,13 +10,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -40,27 +34,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Nov  6 17:27:05 2023       ;
-; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                   ; cyclicRecCheck_24bitParallel                ;
-; Top-level Entity Name           ; cyclicRecCheck_24bitParallel                ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 40                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Wed Nov  8 16:41:14 2023           ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; cyclicRecCheck_24bitParallel                ;
+; Top-level Entity Name       ; cyclicRecCheck_24bitParallel                ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -155,8 +144,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -166,166 +155,33 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                        ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                 ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
-; cyclicRecCheck_24bitParallel.vhd ; yes             ; User VHDL File  ; /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
-
-
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimate of Logic utilization (ALMs needed) ; 0        ;
-;                                             ;          ;
-; Combinational ALUT usage for logic          ; 0        ;
-;     -- 7 input functions                    ; 0        ;
-;     -- 6 input functions                    ; 0        ;
-;     -- 5 input functions                    ; 0        ;
-;     -- 4 input functions                    ; 0        ;
-;     -- <=3 input functions                  ; 0        ;
-;                                             ;          ;
-; Dedicated logic registers                   ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 40       ;
-;                                             ;          ;
-; Total DSP Blocks                            ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; input[0] ;
-; Maximum fan-out                             ; 1        ;
-; Total fan-out                               ; 40       ;
-; Average fan-out                             ; 0.50     ;
-+---------------------------------------------+----------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
-+-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+------------------------------+--------------+
-; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Entity Name                  ; Library Name ;
-+-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+------------------------------+--------------+
-; |cyclicRecCheck_24bitParallel ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 40   ; 0            ; |cyclicRecCheck_24bitParallel ; cyclicRecCheck_24bitParallel ; work         ;
-+-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 40                          ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov  6 17:26:59 2023
+    Info: Processing started: Wed Nov  8 16:41:07 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 4 design units, including 2 entities, in source file cyclicRecCheck_24bitParallel.vhd
-    Info (12022): Found design unit 1: remainder_algorithm-structure File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 13
-    Info (12022): Found design unit 2: cyclicRecCheck_24bitParallel-structure File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 34
-    Info (12023): Found entity 1: remainder_algorithm File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 8
-    Info (12023): Found entity 2: cyclicRecCheck_24bitParallel File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 29
+    Info (12022): Found design unit 1: remainder_algorithm-structure File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 13
+    Info (12022): Found design unit 2: cyclicRecCheck_24bitParallel-structure File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 88
+    Info (12023): Found entity 1: remainder_algorithm File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 8
+    Info (12023): Found entity 2: cyclicRecCheck_24bitParallel File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 83
 Info (12021): Found 6 design units, including 3 entities, in source file basic_logic.vhd
-    Info (12022): Found design unit 1: gateAnd2-logicFunction File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 10
-    Info (12022): Found design unit 2: gateOr2-logicFunction File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 24
-    Info (12022): Found design unit 3: gateXOr2-logicFunction File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 38
-    Info (12023): Found entity 1: gateAnd2 File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 5
-    Info (12023): Found entity 2: gateOr2 File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 19
-    Info (12023): Found entity 3: gateXOr2 File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 33
-Info (12127): Elaborating entity "cyclicRecCheck_24bitParallel" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at cyclicRecCheck_24bitParallel.vhd(31): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "output[0]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[1]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[2]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[3]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[4]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[5]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[6]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[7]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[8]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[9]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[10]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[11]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[12]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[13]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[14]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[15]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[16]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[17]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[18]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[19]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[20]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[21]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[22]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-    Warning (13410): Pin "output[23]" is stuck at GND File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 31
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 16 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "input[0]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-    Warning (15610): No output dependent on input pin "input[1]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-    Warning (15610): No output dependent on input pin "input[2]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-    Warning (15610): No output dependent on input pin "input[3]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-    Warning (15610): No output dependent on input pin "input[4]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-    Warning (15610): No output dependent on input pin "input[5]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-    Warning (15610): No output dependent on input pin "input[6]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-    Warning (15610): No output dependent on input pin "input[7]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-    Warning (15610): No output dependent on input pin "input[8]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-    Warning (15610): No output dependent on input pin "input[9]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-    Warning (15610): No output dependent on input pin "input[10]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-    Warning (15610): No output dependent on input pin "input[11]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-    Warning (15610): No output dependent on input pin "input[12]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-    Warning (15610): No output dependent on input pin "input[13]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-    Warning (15610): No output dependent on input pin "input[14]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-    Warning (15610): No output dependent on input pin "input[15]" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 30
-Info (21057): Implemented 40 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 16 input pins
-    Info (21059): Implemented 24 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
-    Info: Peak virtual memory: 479 megabytes
-    Info: Processing ended: Mon Nov  6 17:27:05 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:17
+    Info (12022): Found design unit 1: gateAnd2-logicFunction File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 10
+    Info (12022): Found design unit 2: gateOr2-logicFunction File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 24
+    Info (12022): Found design unit 3: gateXOr2-logicFunction File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 38
+    Info (12023): Found entity 1: gateAnd2 File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 5
+    Info (12023): Found entity 2: gateOr2 File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 19
+    Info (12023): Found entity 3: gateXOr2 File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 33
+Error (10482): VHDL error at cyclicRecCheck_24bitParallel.vhd(102): object "rOutput" is used but not declared File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 102
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 474 megabytes
+    Error: Processing ended: Wed Nov  8 16:41:14 2023
+    Error: Elapsed time: 00:00:07
+    Error: Total CPU time (on all processors): 00:00:18
 
 
