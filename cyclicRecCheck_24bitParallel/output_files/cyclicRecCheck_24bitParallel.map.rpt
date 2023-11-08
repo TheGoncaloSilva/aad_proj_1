@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cyclicRecCheck_24bitParallel
-Wed Nov  8 16:41:14 2023
+Wed Nov  8 17:47:02 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Nov  8 16:41:14 2023           ;
+; Analysis & Synthesis Status ; Failed - Wed Nov  8 17:47:02 2023           ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; cyclicRecCheck_24bitParallel                ;
 ; Top-level Entity Name       ; cyclicRecCheck_24bitParallel                ;
@@ -144,8 +144,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -161,27 +161,32 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov  8 16:41:07 2023
+    Info: Processing started: Wed Nov  8 17:46:57 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 4 design units, including 2 entities, in source file cyclicRecCheck_24bitParallel.vhd
-    Info (12022): Found design unit 1: remainder_algorithm-structure File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 13
-    Info (12022): Found design unit 2: cyclicRecCheck_24bitParallel-structure File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 88
-    Info (12023): Found entity 1: remainder_algorithm File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 8
-    Info (12023): Found entity 2: cyclicRecCheck_24bitParallel File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 83
+    Info (12022): Found design unit 1: remainder_algorithm-structure File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 13
+    Info (12022): Found design unit 2: cyclicRecCheck_24bitParallel-structure File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 88
+    Info (12023): Found entity 1: remainder_algorithm File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 8
+    Info (12023): Found entity 2: cyclicRecCheck_24bitParallel File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 83
 Info (12021): Found 6 design units, including 3 entities, in source file basic_logic.vhd
-    Info (12022): Found design unit 1: gateAnd2-logicFunction File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 10
-    Info (12022): Found design unit 2: gateOr2-logicFunction File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 24
-    Info (12022): Found design unit 3: gateXOr2-logicFunction File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 38
-    Info (12023): Found entity 1: gateAnd2 File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 5
-    Info (12023): Found entity 2: gateOr2 File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 19
-    Info (12023): Found entity 3: gateXOr2 File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 33
-Error (10482): VHDL error at cyclicRecCheck_24bitParallel.vhd(102): object "rOutput" is used but not declared File: /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 102
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 474 megabytes
-    Error: Processing ended: Wed Nov  8 16:41:14 2023
-    Error: Elapsed time: 00:00:07
-    Error: Total CPU time (on all processors): 00:00:18
+    Info (12022): Found design unit 1: gateAnd2-logicFunction File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 10
+    Info (12022): Found design unit 2: gateOr2-logicFunction File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 24
+    Info (12022): Found design unit 3: gateXOr2-logicFunction File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 38
+    Info (12023): Found entity 1: gateAnd2 File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 5
+    Info (12023): Found entity 2: gateOr2 File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 19
+    Info (12023): Found entity 3: gateXOr2 File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/basic_logic.vhd Line: 33
+Info (12127): Elaborating entity "cyclicRecCheck_24bitParallel" for the top level hierarchy
+Info (12128): Elaborating entity "remainder_algorithm" for hierarchy "remainder_algorithm:remainderAlgo" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 97
+Warning (10541): VHDL Signal Declaration warning at cyclicRecCheck_24bitParallel.vhd(10): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 10
+Warning (10036): Verilog HDL or VHDL warning at cyclicRecCheck_24bitParallel.vhd(17): object "l4" assigned a value but never read File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 17
+Error (10385): VHDL error at cyclicRecCheck_24bitParallel.vhd(68): index value 7 is outside the range (6 downto 0) of object "l3" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 68
+Error (12152): Can't elaborate user hierarchy "remainder_algorithm:remainderAlgo" File: /home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/cyclicRecCheck_24bitParallel.vhd Line: 97
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 3 warnings
+    Error: Peak virtual memory: 468 megabytes
+    Error: Processing ended: Wed Nov  8 17:47:02 2023
+    Error: Elapsed time: 00:00:05
+    Error: Total CPU time (on all processors): 00:00:16
 
 

@@ -81,23 +81,23 @@ LIBRARY basic_logic;
 USE basic_logic.all;
 
 ENTITY cyclicRecCheck_24bitParallel IS
-  PORT (input: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-			output: OUT STD_LOGIC_VECTOR (23 DOWNTO 0));
+  PORT (fInput: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+			fOutput: OUT STD_LOGIC_VECTOR (23 DOWNTO 0));
 END cyclicRecCheck_24bitParallel;
 
 ARCHITECTURE structure OF cyclicRecCheck_24bitParallel IS
 	COMPONENT remainder_algorithm
-		  PORT (rInput: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-					rOutput: OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
+		  PORT (input: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+					ouput: OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
 	END COMPONENT;
 BEGIN
 
 	-- remainder values are already placed in the output signal 
 		-- occupying their assigned number of 8 bits
 	remainderAlgo: remainder_algorithm port map (
-			input (15 downto 0), -- data
-			output (7 downto 0) -- remainder
+			fInput (15 downto 0), -- data
+			fOutput (7 downto 0) -- remainder
 		);
 
-	rOutput (23 downto 8) <= input; -- original data
+	fOutput (23 downto 8) <= fInput; -- original data
 END structure;
