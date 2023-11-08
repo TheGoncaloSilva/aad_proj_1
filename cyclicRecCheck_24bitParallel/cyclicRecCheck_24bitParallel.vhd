@@ -13,8 +13,7 @@ END remainder_algorithm;
 ARCHITECTURE structure OF remainder_algorithm IS
 	SIGNAL l1: STD_LOGIC_VECTOR(16 DOWNTO 0);	-- 17 xors in this level
 	SIGNAL l2: STD_LOGIC_VECTOR(12 DOWNTO 0);	-- 13 xors in this level
-	SIGNAL l3: STD_LOGIC_VECTOR(6 DOWNTO 0);	-- 7 xors in this level
-	SIGNAL l4: STD_LOGIC_VECTOR(1 DOWNTO 0);	-- 2 xors in this level
+	SIGNAL l3: STD_LOGIC_VECTOR(1 DOWNTO 0);	-- 7 xors in this level
 	COMPONENT gateXOr2
 		PORT (x0, x1: IN STD_LOGIC;
 		  y: OUT STD_LOGIC);
@@ -58,18 +57,18 @@ BEGIN
 
 	-------------- Level 3 --------------
 
-	xor32: gateXOr2 PORT MAP (l2(2),  l2(3),  l3(0));
-	xor33: gateXOr2 PORT MAP (l1(16),  l2(0),  l3(1));
-	xor34: gateXOr2 PORT MAP (l2(0),  l2(1),  l3(2));
-	xor35: gateXOr2 PORT MAP (l2(5),  l2(6),  l3(3));
-	xor36: gateXOr2 PORT MAP (l2(7),  l2(8),  l3(4));
-	xor37: gateXOr2 PORT MAP (l1(1),  l1(2),  l3(5));
-	xor38: gateXOr2 PORT MAP (l2(2),  l2(11),  l3(6));
-	xor39: gateXOr2 PORT MAP (l2(1),  l2(12),  l3(7));
+	xor32: gateXOr2 PORT MAP (l2(2),  l2(3),  output(7)); -- R7 found!
+	xor33: gateXOr2 PORT MAP (l1(16),  l2(0),  l3(0));
+	xor34: gateXOr2 PORT MAP (l2(0),  l2(1),  l3(1));
+	xor35: gateXOr2 PORT MAP (l2(5),  l2(6),  output(4)); -- R4 found!
+	xor36: gateXOr2 PORT MAP (l2(7),  l2(8),  output(3)); -- R3 found!
+	xor37: gateXOr2 PORT MAP (l1(1),  l1(2),  output(2)); -- R2 found!
+	xor38: gateXOr2 PORT MAP (l2(2),  l2(11),  output(1)); -- R1 found!
+	xor39: gateXOr2 PORT MAP (l2(1),  l2(12),  output(0)); -- R0 found!
 	
 	-------------- Level 4 --------------
-	xor40: gateXOr2 PORT MAP (l2(4),  l3(1),  l4(0));
-	xor41: gateXOr2 PORT MAP (l1(15),  l3(2),  l4(1));
+	xor40: gateXOr2 PORT MAP (l2(4),  l3(0),  output(6)); -- R6 found!
+	xor41: gateXOr2 PORT MAP (l1(15),  l3(1),  output(5)); -- R5 found!
 
 END structure;
 
@@ -88,7 +87,7 @@ END cyclicRecCheck_24bitParallel;
 ARCHITECTURE structure OF cyclicRecCheck_24bitParallel IS
 	COMPONENT remainder_algorithm
 		  PORT (input: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-					ouput: OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
+					output: OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
 	END COMPONENT;
 BEGIN
 

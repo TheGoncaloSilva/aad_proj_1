@@ -2,7 +2,168 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "fOutput[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[4]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[5]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[6]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[7]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[8]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[9]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[10]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[11]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[12]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[13]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[14]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[15]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[16]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[17]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[18]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[19]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[20]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[21]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[22]",
+					"strict" : false
+				},
+				{
+					"name" : "fOutput[23]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[8]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[14]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[5]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[13]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[6]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[9]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[15]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[12]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[7]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[4]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[10]",
+					"strict" : false
+				},
+				{
+					"name" : "fInput[11]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
