@@ -1,5 +1,5 @@
 Flow report for cyclicRecCheck_24bitParallel
-Thu Nov  9 11:39:35 2023
+Thu Nov  9 11:57:16 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Nov  9 11:39:35 2023       ;
+; Flow Status                     ; Successful - Thu Nov  9 11:57:16 2023       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; cyclicRecCheck_24bitParallel                ;
 ; Top-level Entity Name           ; cyclicRecCheck_24bitParallel                ;
@@ -106,7 +106,17 @@ https://fpgasoftware.intel.com/eula.
 ; Assembler            ; 00:00:05     ; 1.0                     ; 495 MB              ; 00:00:06                           ;
 ; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 815 MB              ; 00:00:04                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 681 MB              ; 00:00:01                           ;
-; Total                ; 00:00:44     ; --                      ; --                  ; 00:01:20                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 677 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 681 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 677 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 681 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 677 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 681 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 677 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 681 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 677 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 681 MB              ; 00:00:01                           ;
+; Total                ; 00:00:54     ; --                      ; --                  ; 00:01:30                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -120,6 +130,16 @@ https://fpgasoftware.intel.com/eula.
 ; Assembler            ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
 ; Timing Analyzer      ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
 ; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
 +----------------------+---------------------------------------------+--------------+------------+----------------+
 
 
@@ -131,6 +151,16 @@ quartus_fit --read_settings_files=off --write_settings_files=off cyclicRecCheck_
 quartus_asm --read_settings_files=off --write_settings_files=off cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel
 quartus_sta cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel
 quartus_eda --read_settings_files=off --write_settings_files=off cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel --vector_source=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation1.vwf --testbench_file=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/simulation1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/ cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel --vector_source=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation1.vwf --testbench_file=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/simulation1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/ cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel --vector_source=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation1.vwf --testbench_file=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/simulation1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/ cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel --vector_source=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation1.vwf --testbench_file=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/simulation1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/ cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel --vector_source=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation1.vwf --testbench_file=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/simulation1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/ cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel
 
 
 
