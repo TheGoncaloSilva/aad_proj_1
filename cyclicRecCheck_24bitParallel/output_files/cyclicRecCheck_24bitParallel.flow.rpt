@@ -1,5 +1,5 @@
 Flow report for cyclicRecCheck_24bitParallel
-Thu Nov  9 11:57:16 2023
+Thu Nov  9 17:57:21 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Nov  9 11:57:16 2023       ;
+; Flow Status                     ; Successful - Thu Nov  9 17:57:21 2023       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; cyclicRecCheck_24bitParallel                ;
 ; Top-level Entity Name           ; cyclicRecCheck_24bitParallel                ;
@@ -116,31 +116,39 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 681 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 677 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 681 MB              ; 00:00:01                           ;
-; Total                ; 00:00:54     ; --                      ; --                  ; 00:01:30                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 669 MB              ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 669 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 669 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 673 MB              ; 00:00:00                           ;
+; Total                ; 00:00:57     ; --                      ; --                  ; 00:01:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                                 ;
-+----------------------+---------------------------------------------+--------------+------------+----------------+
-; Module Name          ; Machine Hostname                            ; OS Name      ; OS Version ; Processor type ;
-+----------------------+---------------------------------------------+--------------+------------+----------------+
-; Analysis & Synthesis ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
-; Fitter               ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
-; Assembler            ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
-; Timing Analyzer      ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
-; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
-; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
-; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
-; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
-; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
-; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
-; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
-; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
-; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
-; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
-; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04 ; 23         ; x86_64         ;
-+----------------------+---------------------------------------------+--------------+------------+----------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                                   ;
++----------------------+---------------------------------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname                            ; OS Name        ; OS Version ; Processor type ;
++----------------------+---------------------------------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04   ; 23         ; x86_64         ;
+; Fitter               ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04   ; 23         ; x86_64         ;
+; Assembler            ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04   ; 23         ; x86_64         ;
+; Timing Analyzer      ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04   ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04   ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04   ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04   ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04   ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04   ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04   ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04   ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04   ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04   ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04   ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; catarina-VivoBook-ASUSLaptop-X432FLC-S432FL ; Ubuntu 23.04   ; 23         ; x86_64         ;
+; EDA Netlist Writer   ; goncalo-Yoga-Pro-7-14ARP8                   ; Ubuntu 22.04.3 ; 22         ; x86_64         ;
+; EDA Netlist Writer   ; goncalo-Yoga-Pro-7-14ARP8                   ; Ubuntu 22.04.3 ; 22         ; x86_64         ;
+; EDA Netlist Writer   ; goncalo-Yoga-Pro-7-14ARP8                   ; Ubuntu 22.04.3 ; 22         ; x86_64         ;
+; EDA Netlist Writer   ; goncalo-Yoga-Pro-7-14ARP8                   ; Ubuntu 22.04.3 ; 22         ; x86_64         ;
++----------------------+---------------------------------------------+----------------+------------+----------------+
 
 
 ------------
@@ -161,6 +169,10 @@ quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_f
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/ cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel --vector_source=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation1.vwf --testbench_file=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/simulation1.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/ cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel --vector_source=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation1.vwf --testbench_file=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/simulation1.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel --vector_source=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation1.vwf --testbench_file=/home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/simulation1.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel --vector_source=/home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/simulation1_goncalo.vwf --testbench_file=/home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/simulation1_goncalo.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/goncalo/repos/aad_proj_1/cyclicRecCheck_24bitParallel/simulation/qsim/ cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel
 
 
 
