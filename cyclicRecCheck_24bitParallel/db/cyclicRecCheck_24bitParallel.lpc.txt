@@ -3,7 +3,6 @@
 +---------------------+-------+----------------+--------------+----------------+--------+-----------------+---------------+-----------------+-------+----------------+--------------+------------------+-------------------+
 ; Hierarchy           ; Input ; Constant Input ; Unused Input ; Floating Input ; Output ; Constant Output ; Unused Output ; Floating Output ; Bidir ; Constant Bidir ; Unused Bidir ; Input only Bidir ; Output only Bidir ;
 +---------------------+-------+----------------+--------------+----------------+--------+-----------------+---------------+-----------------+-------+----------------+--------------+------------------+-------------------+
-; remainderAlgo|xor41 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor40 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor39 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor38 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
@@ -15,8 +14,8 @@
 ; remainderAlgo|xor32 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor31 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor30 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
-; remainderAlgo|xor29 ; 2     ; 1              ; 0            ; 1              ; 1      ; 1               ; 1             ; 1               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
-; remainderAlgo|xor28 ; 2     ; 1              ; 0            ; 1              ; 1      ; 1               ; 1             ; 1               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
+; remainderAlgo|xor29 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
+; remainderAlgo|xor28 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor27 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor26 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor25 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
@@ -28,7 +27,7 @@
 ; remainderAlgo|xor19 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor18 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor17 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
-; remainderAlgo|xor16 ; 2     ; 1              ; 0            ; 1              ; 1      ; 1               ; 1             ; 1               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
+; remainderAlgo|xor16 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor15 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor14 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor13 ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
@@ -39,6 +38,7 @@
 ; remainderAlgo|xor8  ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor7  ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor6  ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
+; remainderAlgo|xor5  ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor4  ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor3  ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; remainderAlgo|xor2  ; 2     ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
