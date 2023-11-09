@@ -58,53 +58,49 @@ fOutput[23] <= fInput[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo
-input[0] => gateXOr2:xor1.x0
-input[0] => gateXOr2:xor14.x0
-input[0] => gateXOr2:xor29.x1
-input[1] => gateXOr2:xor1.x1
-input[1] => gateXOr2:xor10.x0
-input[2] => gateXOr2:xor2.x0
-input[2] => gateXOr2:xor7.x0
-input[2] => gateXOr2:xor13.x0
-input[3] => gateXOr2:xor2.x1
-input[3] => gateXOr2:xor11.x0
-input[3] => gateXOr2:xor12.x0
-input[4] => gateXOr2:xor3.x0
-input[4] => gateXOr2:xor7.x1
-input[5] => gateXOr2:xor3.x1
-input[5] => gateXOr2:xor11.x1
-input[5] => gateXOr2:xor13.x1
-input[5] => gateXOr2:xor31.x1
-input[6] => gateXOr2:xor9.x0
-input[6] => gateXOr2:xor12.x1
-input[6] => gateXOr2:xor18.x0
-input[7] => gateXOr2:xor4.x0
-input[7] => gateXOr2:xor25.x1
-input[8] => gateXOr2:xor6.x0
+input[0] => gateXOr2:xor5.x0
+input[0] => gateXOr2:xor8.x0
+input[0] => gateXOr2:xor9.x0
+input[1] => gateXOr2:xor4.x1
+input[1] => gateXOr2:xor8.x1
+input[1] => gateXOr2:xor16.x1
+input[2] => gateXOr2:xor5.x1
+input[2] => gateXOr2:xor6.x0
+input[3] => gateXOr2:xor3.x1
+input[3] => gateXOr2:xor19.x0
+input[4] => gateXOr2:xor2.x1
+input[4] => gateXOr2:xor15.x0
+input[5] => gateXOr2:xor3.x0
+input[5] => gateXOr2:xor11.x0
+input[6] => gateXOr2:xor2.x0
+input[6] => gateXOr2:xor14.x0
+input[7] => gateXOr2:xor1.x1
+input[7] => gateXOr2:xor15.x1
+input[8] => gateXOr2:xor9.x1
+input[8] => gateXOr2:xor10.x0
 input[8] => gateXOr2:xor14.x1
-input[9] => gateXOr2:xor8.x0
-input[9] => gateXOr2:xor15.x0
-input[10] => gateXOr2:xor15.x1
-input[10] => gateXOr2:xor17.x0
-input[10] => gateXOr2:xor27.x1
-input[11] => gateXOr2:xor10.x1
-input[11] => gateXOr2:xor16.x0
-input[12] => gateXOr2:xor16.x1
-input[12] => gateXOr2:xor17.x1
-input[12] => gateXOr2:xor30.x1
-input[13] => gateXOr2:xor4.x1
-input[13] => gateXOr2:xor9.x1
-input[14] => gateXOr2:xor6.x1
-input[15] => gateXOr2:xor8.x1
-input[15] => gateXOr2:xor18.x1
-output[0] <= gateXOr2:xor39.y
-output[1] <= gateXOr2:xor38.y
-output[2] <= gateXOr2:xor37.y
-output[3] <= gateXOr2:xor36.y
-output[4] <= gateXOr2:xor35.y
-output[5] <= gateXOr2:xor41.y
-output[6] <= gateXOr2:xor40.y
-output[7] <= gateXOr2:xor32.y
+input[9] => gateXOr2:xor7.x0
+input[9] => gateXOr2:xor11.x1
+input[10] => gateXOr2:xor12.x0
+input[10] => gateXOr2:xor13.x0
+input[11] => gateXOr2:xor6.x1
+input[11] => gateXOr2:xor12.x1
+input[12] => gateXOr2:xor13.x1
+input[12] => gateXOr2:xor27.x1
+input[12] => gateXOr2:xor29.x1
+input[13] => gateXOr2:xor1.x0
+input[13] => gateXOr2:xor10.x1
+input[14] => gateXOr2:xor4.x0
+input[15] => gateXOr2:xor7.x1
+input[15] => gateXOr2:xor16.x0
+output[0] <= gateXOr2:xor30.y
+output[1] <= gateXOr2:xor40.y
+output[2] <= gateXOr2:xor32.y
+output[3] <= gateXOr2:xor33.y
+output[4] <= gateXOr2:xor34.y
+output[5] <= gateXOr2:xor39.y
+output[6] <= gateXOr2:xor38.y
+output[7] <= gateXOr2:xor37.y
 
 
 |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor1
@@ -126,6 +122,12 @@ y <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor4
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor5
 x0 => y.IN0
 x1 => y.IN1
 y <= y.DB_MAX_OUTPUT_PORT_TYPE
@@ -336,12 +338,6 @@ y <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor40
-x0 => y.IN0
-x1 => y.IN1
-y <= y.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor41
 x0 => y.IN0
 x1 => y.IN1
 y <= y.DB_MAX_OUTPUT_PORT_TYPE
