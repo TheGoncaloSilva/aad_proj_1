@@ -13,7 +13,10 @@ def calculate_crc(data: str, key: str) -> str:
     return ''.join(str(bit) for bit in data[-(len(key) - 1):])
 
 # Example usage:
-data: str = '100100001'#'101010101010101001110100' #'100100'
-key: str = '1101' #'110100111' #'1101'
+#data: str = '100100'    # data without CRC
+data: str = '100100001' # data with CRC
+key: str = '1101' # key
+#data: std = '101010101010101001110100' # test data with crc
+#key: str = '110100111' # test key
 crc: str = calculate_crc(data, key)
 print(f"CRC Remainder: {crc}")
