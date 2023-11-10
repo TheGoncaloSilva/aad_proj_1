@@ -44,7 +44,7 @@ BEGIN
                             CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   1c
                             CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   1d
                             CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   1e
-                            CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   1f
+                            CONV_STD_LOGIC_VECTOR (16#7#, 3));  -- nRst = 1   nSetO = 1   nEnClk = 1   1f
     VARIABLE pos: INTEGER;
   BEGIN
     pos := CONV_INTEGER (add);

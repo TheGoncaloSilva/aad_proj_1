@@ -12,6 +12,20 @@ BEGIN
   y <= x1 AND x2;
 END logicFunction;
 
+------ OR GATE --------
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY gateOr2 IS
+  PORT (x1, x2: IN STD_LOGIC;
+        y:      OUT STD_LOGIC);
+END gateOr2;
+
+ARCHITECTURE logicFunction OF gateOr2 IS
+BEGIN
+  y <= x1 OR x2;
+END logicFunction;
+
 ------ NAND GATE --------
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;

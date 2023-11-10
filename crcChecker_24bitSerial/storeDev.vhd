@@ -31,12 +31,10 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 entity FlipFlopD is 
-   port(
-      clk : in std_logic;   
-		rst : in std_logic;
-      d :in  std_logic;
-      Q : out std_logic    		
-   );
+   port(clk  : in std_logic;   
+			rst : in std_logic;
+			d   : in  std_logic;
+			Q   : out std_logic);
 end FlipFlopD;
 architecture structure of FlipFlopD is  
 begin  
