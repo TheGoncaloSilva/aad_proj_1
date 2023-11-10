@@ -67,3 +67,13 @@ $$
 $$
 
 In this example, there needs to be two levels of processing. One where $(a_0 \oplus a_1)$ is done and another where this result is **xor'ed** with $a_3$. The system can execute various xor's at each level. But the aim of optimizing is to reach the smaller amount of xor's needed, by taking advantage of multiple xor's needed. In our case, the theoretical value of xor's needed without optimizing would be 58 and 9 propagation delays and we managed to reduce the amount of xor's to 40 and 3-4 propagation delays.
+
+# Encoder
+
+The encoder is a block that should take a 16-bit word and output a 24-bit one. Where the first 16 bits should be the entry word itself and the remaining 8 bits, the computed **CRC** value.
+
+## Division
+
+Observing the design principles and following a division algorithm approach to solve the problem, the following equations were identified to reach the remainder:
+
+The bigger blocks for division algo are Linear Feedback Shift Registers
