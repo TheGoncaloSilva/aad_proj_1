@@ -13,9 +13,33 @@ If you don't know what **CRC** is, we suggest checking the following links with 
 
 # Encoder
 
-The encoder is a block that should take a 16-bit word and output a 24-bit one. Where the first 16 bits should be the entry word itself and the remaining 8 bits, the computed **CRC** value.
+The encoder is a block that should take a 16-bit word and output a 24-bit one. Where the first 16 bits should be the entry word itself and the remaining 8 bits, the computed **CRC** value. Following we have a small example of the division algorithm, with the message **100100** and the divisor **1101**. Since the divisor is 4-bits, the CRC should have $4-1=3$ bits and to calculate it we append this number of bits to the message and conduct the division. Attention that this is not the chosen algorithm for our implementation, due to the increased computations in comparison to te **Remainder Properties**
 
-## Remainder
+$$
+\begin{array}{rl}
+100100000 & \underline{|\phantom{0}1101} \\
+\underline{\phantom{0}-1101} & |\phantom{0}111101 \\
+01000 \\
+\underline{\phantom{0}-1101} \\
+01010 \\
+\underline{\phantom{0}-1101} \\
+01110 \\
+\underline{\phantom{0}-1101} \\
+00110 \\
+\underline{\phantom{0}-0} \\
+001100 \\
+\underline{\phantom{0}-1101} \\
+001 \\
+\end{array}
+$$
+
+* $\text{Message} = 100100$ (6 bits)
+* $\text{Divisor} = 1101$ (4 bits)
+* $\text{CRC} = 001$ ($\text{Divisor}_{\text{bits}}-1 = 3 \text{bits}$)
+* $\text{Encoded Message} = 100100001$
+* $Q(x) = 111101$ ($\text{Message}_{\text{bits}}-1 = 5 \text{bits}$)
+
+## Remainder Algorithm
 
 Observing the design principles and following a remainder approach to solve the problem, the following equations were identified to reach the remainder:
 
@@ -30,23 +54,22 @@ Level 0:
 * $r_1=(a_0 \oplus a_3) \oplus a_4 \oplus a_5 \oplus a_6 \oplus a_7 \oplus a_8 \oplus a_9 \oplus a_{13} \oplus a_{15}$
 * $r_0=(a_0 \oplus a_1) \oplus a_2 \oplus a_4 \oplus a_6 \oplus a_8 \oplus a_{13} \oplus a_{14}$
 
-Simplication:
+Simplification:
 
 * $r_7=(\text{xor1} \oplus a_3) \oplus a_5 \oplus a_7 \oplus a_{12} \oplus a_{13}$
-  * xor1 = $a_0 \oplus a_1$
+  * **xor1** = $a_0 \oplus a_1$
 * $r_6=(\text{xor2} \oplus a_3) \oplus a_4 \oplus a_5 \oplus a_6 \oplus a_7 \oplus a_{11} \oplus a_{13} \oplus a_{15}$
-  * xor2 = $a_1 \oplus a_2$
+  * **xor2** = $a_1 \oplus a_2$
 * $r_5=(\text{xor1} \oplus a_2) \oplus a_3 \oplus a_4 \oplus a_5 \oplus a_6 \oplus a_{10} \oplus a_{12} \oplus a_{14}$
 * $r_4=(\text{xor3} \oplus a_7) \oplus a_9 \oplus a_{11} \oplus a_{12} \oplus a_{15}$
-  * xor3 = $a_2 \oplus a_4$
+  * **xor3** = $a_2 \oplus a_4$
 * $r_3=(\text{xor4} \oplus a_6) \oplus a_8 \oplus a_{10} \oplus a_{11} \oplus a_{14}$
-  * xor4 = $a_1 \oplus a_3$
+  * **xor4** = $a_1 \oplus a_3$
 * $r_2=(\text{xor5} \oplus a_5) \oplus a_7 \oplus a_9 \oplus a_{10} \oplus a_{13}$
-  * xor5 = $a_0 \oplus a_2$
+  * **xor5** = $a_0 \oplus a_2$
 * $r_1=(\text{xor6} \oplus a_4) \oplus a_5 \oplus a_6 \oplus a_7 \oplus a_8 \oplus a_9 \oplus a_{13} \oplus a_{15}$
-  * xor6 = $a_0 \oplus a_3$
+  * **xor6** = $a_0 \oplus a_3$
 * $r_0=(\text{xor1} \oplus a_2) \oplus a_4 \oplus a_6 \oplus a_8 \oplus a_{13} \oplus a_{14}$
-* 
 
 ...
 Result:
@@ -66,13 +89,15 @@ $$
 (a_0 \oplus a_1) \oplus a_3
 $$
 
-In this example, there needs to be two levels of processing. One where $(a_0 \oplus a_1)$ is done and another where this result is **xor'ed** with $a_3$. The system can execute various xor's at each level. But the aim of optimizing is to reach the smaller amount of xor's needed, by taking advantage of multiple xor's needed. In our case, the theoretical value of xor's needed without optimizing would be 58 and 9 propagation delays and we managed to reduce the amount of xor's to 40 and 3-4 propagation delays.
+In this example, there needs to be two levels of processing. One where $(a_0 \oplus a_1)$ is done and another where this result is **xor'ed** with $a_3$. The system can execute various xor's at each level. But the aim of optimizing is to reach the smaller amount of xor's needed, by taking advantage of multiple xor's needed. In our case, the theoretical value of xor's needed without optimizing would be 58 and 9 propagation delays and we managed to reduce the amount of xor's to 40 and **3-4 propagation delays(Será?)**.
 
-# Encoder
+The exact simplifications conducted can be seen in this **spreadsheets (include hyperlink here)**
 
-The encoder is a block that should take a 16-bit word and output a 24-bit one. Where the first 16 bits should be the entry word itself and the remaining 8 bits, the computed **CRC** value.
+# Checker
 
-## Division
+The checker is a block that should take a 24-bit word and output one bit. This bit indicates if the message was received with (bit with value 1) or without errors (bit with value 0). Inherently the first 16 bits should represent the message itself and the following 8 bits, the computed CRC value.
+
+## Division Algorithm
 
 Observing the design principles and following a division algorithm approach to solve the problem, the following equations were identified to reach the remainder:
 
