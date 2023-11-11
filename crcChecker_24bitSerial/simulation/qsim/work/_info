@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simulation/qsim
 Ecrcchecker_24bitserial
-Z1 w1699707959
+Z1 w1699717963
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 3HQPc5MVbmOPN?>a5EBYj2
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -18,7 +18,7 @@ Z5 DPx8 cyclonev 19 cyclonev_components 0 22 jZ]H46BQLgIP5mfRTO`3B1
 Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ^Ch;U@;bMk1;>A2B<UV`k2
-!i122 12
+!i122 16
 R0
 Z9 8crcChecker_24bitSerial.vho
 Z10 FcrcChecker_24bitSerial.vho
@@ -28,9 +28,9 @@ V6MDZ?h:6L[1[C7RUSCS3J1
 !s100 z>SAVGA1Ym:Ek7;Gm:Eg]1
 Z11 OV;C;2020.1;71
 32
-Z12 !s110 1699707959
+Z12 !s110 1699717964
 !i10b 1
-Z13 !s108 1699707959.000000
+Z13 !s108 1699717964.000000
 Z14 !s90 -work|work|crcChecker_24bitSerial.vho|
 Z15 !s107 crcChecker_24bitSerial.vho|
 !i113 1
@@ -45,11 +45,11 @@ R6
 R7
 R8
 DEx4 work 22 crcchecker_24bitserial 0 22 6MDZ?h:6L[1[C7RUSCS3J1
-!i122 12
+!i122 16
 l72
 L53 87
-VzT;1[l_oe2X7bo@D>G]U]3
-!s100 ]o<M3N??UmQ7<NRAf:QiU0
+V`Y28R3`YjBXRlcenK=K^;1
+!s100 QmGXJImhUXSiSYbHRdG2O2
 R11
 32
 R12
@@ -61,13 +61,13 @@ R15
 R16
 R17
 Ecrcchecker_24bitserial_vhd_vec_tst
-Z18 w1699707958
+Z18 w1699717962
 R6
 R7
-!i122 13
+!i122 17
 R0
-Z19 8Waveform1.vwf.vht
-Z20 FWaveform1.vwf.vht
+Z19 8Waveform.vwf.vht
+Z20 FWaveform.vwf.vht
 l0
 L32 1
 V@]_Km^0:>4Xl8NnP?FZ8W1
@@ -77,16 +77,16 @@ R11
 R12
 !i10b 1
 R13
-Z21 !s90 -work|work|Waveform1.vwf.vht|
-!s107 Waveform1.vwf.vht|
+Z21 !s90 -work|work|Waveform.vwf.vht|
+Z22 !s107 Waveform.vwf.vht|
 !i113 1
 R16
 R17
 Acrcchecker_24bitserial_arch
 R6
 R7
-Z22 DEx4 work 34 crcchecker_24bitserial_vhd_vec_tst 0 22 @]_Km^0:>4Xl8NnP?FZ8W1
-!i122 13
+Z23 DEx4 work 34 crcchecker_24bitserial_vhd_vec_tst 0 22 @]_Km^0:>4Xl8NnP?FZ8W1
+!i122 17
 l49
 L34 82
 Vj=ScjEGIzb>@LB4O@ciFh2
@@ -97,7 +97,7 @@ R12
 !i10b 1
 R13
 R21
-Z23 !s107 Waveform1.vwf.vht|
+R22
 !i113 1
 R16
 R17

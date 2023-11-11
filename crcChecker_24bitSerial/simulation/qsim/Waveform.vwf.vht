@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/11/2023 12:51:58"
+-- Generated on "11/11/2023 15:52:42"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          crcChecker_24bitSerial
 -- 
@@ -75,34 +75,13 @@ BEGIN
 	WAIT FOR 20000 ps;
 	dIn <= '0';
 	WAIT FOR 20000 ps;
-	dIn <= '1';
-	WAIT FOR 20000 ps;
-	dIn <= '0';
-	WAIT FOR 20000 ps;
-	dIn <= '1';
-	WAIT FOR 20000 ps;
-	dIn <= '0';
-	WAIT FOR 20000 ps;
-	dIn <= '1';
-	WAIT FOR 20000 ps;
-	dIn <= '0';
-	WAIT FOR 20000 ps;
-	dIn <= '1';
-	WAIT FOR 20000 ps;
-	dIn <= '0';
-	WAIT FOR 20000 ps;
-	dIn <= '1';
-	WAIT FOR 20000 ps;
-	dIn <= '0';
-	WAIT FOR 20000 ps;
-	dIn <= '1';
-	WAIT FOR 20000 ps;
-	dIn <= '0';
-	WAIT FOR 20000 ps;
-	dIn <= '1';
-	WAIT FOR 20000 ps;
-	dIn <= '0';
-	WAIT FOR 20000 ps;
+	FOR i IN 1 TO 6
+	LOOP
+		dIn <= '1';
+		WAIT FOR 20000 ps;
+		dIn <= '0';
+		WAIT FOR 20000 ps;
+	END LOOP;
 	dIn <= '1';
 	WAIT FOR 20000 ps;
 	dIn <= '0';

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for crcChecker_24bitSerial
-Sat Nov 11 13:12:36 2023
+Sat Nov 11 15:44:46 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -17,14 +17,18 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   9. Removed Registers Triggering Further Register Optimizations
  10. General Register Statistics
  11. Port Connectivity Checks: "flipFlopDPET:ffP"
- 12. Port Connectivity Checks: "binCounter_5bit:bc|flipFlopDPET:ff4"
- 13. Port Connectivity Checks: "binCounter_5bit:bc|flipFlopDPET:ff3"
- 14. Port Connectivity Checks: "binCounter_5bit:bc|flipFlopDPET:ff2"
- 15. Port Connectivity Checks: "binCounter_5bit:bc|flipFlopDPET:ff1"
- 16. Port Connectivity Checks: "binCounter_5bit:bc|flipFlopDPET:ff0"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+ 12. Port Connectivity Checks: "LinarFeedback_ShiftRegister:lsfr|gateXor2:xor4"
+ 13. Port Connectivity Checks: "LinarFeedback_ShiftRegister:lsfr|gateXor2:xor3"
+ 14. Port Connectivity Checks: "LinarFeedback_ShiftRegister:lsfr|gateXor2:xor2"
+ 15. Port Connectivity Checks: "LinarFeedback_ShiftRegister:lsfr|gateXor2:xor1"
+ 16. Port Connectivity Checks: "binCounter_5bit:bc|flipFlopDPET:ff4"
+ 17. Port Connectivity Checks: "binCounter_5bit:bc|flipFlopDPET:ff3"
+ 18. Port Connectivity Checks: "binCounter_5bit:bc|flipFlopDPET:ff2"
+ 19. Port Connectivity Checks: "binCounter_5bit:bc|flipFlopDPET:ff1"
+ 20. Port Connectivity Checks: "binCounter_5bit:bc|flipFlopDPET:ff0"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -51,7 +55,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Nov 11 13:12:36 2023       ;
+; Analysis & Synthesis Status     ; Successful - Sat Nov 11 15:44:46 2023       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; crcChecker_24bitSerial                      ;
 ; Top-level Entity Name           ; crcChecker_24bitSerial                      ;
@@ -188,31 +192,31 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 0          ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 0          ;
-;     -- 7 input functions                    ; 0          ;
-;     -- 6 input functions                    ; 0          ;
-;     -- 5 input functions                    ; 0          ;
-;     -- 4 input functions                    ; 0          ;
-;     -- <=3 input functions                  ; 0          ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 4          ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; err~output ;
-; Maximum fan-out                             ; 1          ;
-; Total fan-out                               ; 4          ;
-; Average fan-out                             ; 0.50       ;
-+---------------------------------------------+------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 4     ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; dIn   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 4     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -225,47 +229,33 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                    ;
-+---------------------------------------------------+---------------------------------------------------+
-; Register name                                     ; Reason for Removal                                ;
-+---------------------------------------------------+---------------------------------------------------+
-; binCounter_5bit:bc|flipFlopDPET:ff0|nQ            ; Merged with binCounter_5bit:bc|flipFlopDPET:ff0|Q ;
-; flipFlopDPET:ffP|Q                                ; Stuck at VCC due to stuck port clock              ;
-; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff7|Q ; Lost fanout                                       ;
-; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff6|Q ; Lost fanout                                       ;
-; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff5|Q ; Lost fanout                                       ;
-; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff4|Q ; Lost fanout                                       ;
-; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff3|Q ; Lost fanout                                       ;
-; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff2|Q ; Lost fanout                                       ;
-; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff1|Q ; Lost fanout                                       ;
-; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff0|Q ; Lost fanout                                       ;
-; binCounter_5bit:bc|flipFlopDPET:ff0|Q             ; Lost fanout                                       ;
-; binCounter_5bit:bc|flipFlopDPET:ff1|Q             ; Lost fanout                                       ;
-; binCounter_5bit:bc|flipFlopDPET:ff2|Q             ; Lost fanout                                       ;
-; binCounter_5bit:bc|flipFlopDPET:ff3|Q             ; Lost fanout                                       ;
-; binCounter_5bit:bc|flipFlopDPET:ff4|Q             ; Lost fanout                                       ;
-; Total Number of Removed Registers = 15            ;                                                   ;
-+---------------------------------------------------+---------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                       ;
++------------------------------------------------+---------------------------------------------------------+
+; Register name                                  ; Reason for Removal                                      ;
++------------------------------------------------+---------------------------------------------------------+
+; binCounter_5bit:bc|flipFlopDPET:ff0|nQ         ; Merged with binCounter_5bit:bc|flipFlopDPET:ff0|Q       ;
+; LinarFeedback_ShiftRegister:lsfr|dff_out[1..7] ; Merged with LinarFeedback_ShiftRegister:lsfr|dff_out[0] ;
+; LinarFeedback_ShiftRegister:lsfr|dff_out[0]    ; Stuck at GND due to stuck port data_in                  ;
+; flipFlopDPET:ffP|Q                             ; Stuck at VCC due to stuck port clock                    ;
+; binCounter_5bit:bc|flipFlopDPET:ff0|Q          ; Lost fanout                                             ;
+; binCounter_5bit:bc|flipFlopDPET:ff1|Q          ; Lost fanout                                             ;
+; binCounter_5bit:bc|flipFlopDPET:ff2|Q          ; Lost fanout                                             ;
+; binCounter_5bit:bc|flipFlopDPET:ff3|Q          ; Lost fanout                                             ;
+; binCounter_5bit:bc|flipFlopDPET:ff4|Q          ; Lost fanout                                             ;
+; Total Number of Removed Registers = 15         ;                                                         ;
++------------------------------------------------+---------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                  ;
-+--------------------+-------------------------+-------------------------------------------------------------------------------+
-; Register name      ; Reason for Removal      ; Registers Removed due to This Register                                        ;
-+--------------------+-------------------------+-------------------------------------------------------------------------------+
-; flipFlopDPET:ffP|Q ; Stuck at VCC            ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff7|Q,                            ;
-;                    ; due to stuck port clock ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff6|Q,                            ;
-;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff5|Q,                            ;
-;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff4|Q,                            ;
-;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff3|Q,                            ;
-;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff2|Q,                            ;
-;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff1|Q,                            ;
-;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff0|Q,                            ;
-;                    ;                         ; binCounter_5bit:bc|flipFlopDPET:ff0|Q, binCounter_5bit:bc|flipFlopDPET:ff1|Q, ;
-;                    ;                         ; binCounter_5bit:bc|flipFlopDPET:ff2|Q, binCounter_5bit:bc|flipFlopDPET:ff3|Q, ;
-;                    ;                         ; binCounter_5bit:bc|flipFlopDPET:ff4|Q                                         ;
-+--------------------+-------------------------+-------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                             ;
++---------------------------------------------+---------------------------+-------------------------------------------------------------------------------+
+; Register name                               ; Reason for Removal        ; Registers Removed due to This Register                                        ;
++---------------------------------------------+---------------------------+-------------------------------------------------------------------------------+
+; LinarFeedback_ShiftRegister:lsfr|dff_out[0] ; Stuck at GND              ; flipFlopDPET:ffP|Q, binCounter_5bit:bc|flipFlopDPET:ff0|Q,                    ;
+;                                             ; due to stuck port data_in ; binCounter_5bit:bc|flipFlopDPET:ff1|Q, binCounter_5bit:bc|flipFlopDPET:ff2|Q, ;
+;                                             ;                           ; binCounter_5bit:bc|flipFlopDPET:ff3|Q, binCounter_5bit:bc|flipFlopDPET:ff4|Q  ;
++---------------------------------------------+---------------------------+-------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -290,6 +280,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; nrst ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; nq   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LinarFeedback_ShiftRegister:lsfr|gateXor2:xor4"                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LinarFeedback_ShiftRegister:lsfr|gateXor2:xor3"                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LinarFeedback_ShiftRegister:lsfr|gateXor2:xor2"                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LinarFeedback_ShiftRegister:lsfr|gateXor2:xor1"                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -372,7 +398,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Nov 11 13:12:29 2023
+    Info: Processing started: Sat Nov 11 15:44:39 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off crcChecker_24bitSerial -c crcChecker_24bitSerial
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -422,7 +448,6 @@ Info (12128): Elaborating entity "contMem" for hierarchy "control:con|contMem:cM
 Info (12128): Elaborating entity "gateNand2" for hierarchy "control:con|gateNand2:nad1" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 88
 Info (12128): Elaborating entity "gateNor2" for hierarchy "control:con|gateNor2:nord" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 92
 Info (12128): Elaborating entity "LinarFeedback_ShiftRegister" for hierarchy "LinarFeedback_ShiftRegister:lsfr" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 65
-Info (12128): Elaborating entity "FlipFlopD" for hierarchy "LinarFeedback_ShiftRegister:lsfr|FlipFlopD:dff7" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/LinarFeedback_ShiftRegister.vhd Line: 45
 Info (12128): Elaborating entity "comparator" for hierarchy "comparator:comp" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 66
 Info (12128): Elaborating entity "gateOr2" for hierarchy "comparator:comp|gateOr2:or1" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/comparator.vhd Line: 20
 Info (276014): Found 1 instances of uninferred RAM logic
@@ -431,20 +456,20 @@ Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer control:con|contMem:cMem|prog~0 File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 16
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "err" is stuck at VCC File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 23
-Info (17049): 13 registers lost all their fanouts during netlist optimizations.
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "dIn" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 22
     Warning (15610): No output dependent on input pin "clk" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 21
     Warning (15610): No output dependent on input pin "nGRst" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 20
-    Warning (15610): No output dependent on input pin "dIn" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 22
 Info (21057): Implemented 4 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 1 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 487 megabytes
-    Info: Processing ended: Sat Nov 11 13:12:36 2023
+    Info: Peak virtual memory: 483 megabytes
+    Info: Processing ended: Sat Nov 11 15:44:46 2023
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:18
 
 

@@ -33,23 +33,22 @@ ARCHITECTURE structure OF LinarFeedback_ShiftRegister IS
     );
   END COMPONENT;
 
-  SIGNAL X08, X1, X2, X3, X5: STD_LOGIC;
-  SIGNAL dff0_out, dff1_out, dff2_out, dff3_out, dff4_out, dff5_out, dff6_out, dff7_out: STD_LOGIC;
+  SIGNAL X, dff_out: STD_LOGIC_VECTOR(7 DOWNTO 0);
 BEGIN
-  xor0: gateXor2 PORT MAP (dff0_out, dIn, X08);
-  xor1: gateXor2 PORT MAP (X08, dff7_out, X1);
-  xor2: gateXor2 PORT MAP (X08, dff6_out, X2);
-  xor3: gateXor2 PORT MAP (X08, dff5_out, X3);
-  xor4: gateXor2 PORT MAP (X08, dff3_out, X5);
+  xor0: gateXor2 PORT MAP (dff_out(0), dIn, X(0));
+  xor1: gateXor2 PORT MAP (X(0), dff_out(7), X(1));
+  xor2: gateXor2 PORT MAP (X(0), dff_out(6), X(2));
+  xor3: gateXor2 PORT MAP (X(0), dff_out(5), X(3));
+  xor4: gateXor2 PORT MAP (X(0), dff_out(3), X(5));
   
-  dff7: FlipFlopD PORT MAP (clk, nGRst, X08, dff7_out);
-  dff6: FlipFlopD PORT MAP (clk, nGRst, X1, dff6_out);
-  dff5: FlipFlopD PORT MAP (clk, nGRst, X2, dff5_out);
-  dff4: FlipFlopD PORT MAP (clk, nGRst, X3, dff4_out);
-  dff3: FlipFlopD PORT MAP (clk, nGRst, dff4_out, dff3_out);
-  dff2: FlipFlopD PORT MAP (clk, nGRst, X5, dff2_out);
-  dff1: FlipFlopD PORT MAP (clk, nGRst, dff2_out, dff1_out);
-  dff0: FlipFlopD PORT MAP (clk, nGRst, dff1_out, dff0_out);
-  
-  dOut <= dff0_out & dff1_out & dff2_out & dff3_out & dff4_out & dff5_out & dff6_out & dff7_out;
+  dff_process: process(clk, nGRst)
+  begin
+      if nGRst = '0' then
+          dff_out <= (others => '0');
+      elsif rising_edge(clk) then
+          dff_out <= dff_out(6 downto 0) & dff_out(7);
+      end if;
+  end process dff_process;
+
+  dOut <= dff_out;
 END structure;

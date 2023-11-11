@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "11/11/2023 12:49:58"
+-- DATE "11/11/2023 15:45:25"
 
 -- 
 -- Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -44,10 +44,10 @@ ENTITY 	crcChecker_24bitSerial IS
 END crcChecker_24bitSerial;
 
 -- Design Ports Information
--- err	=>  Location: PIN_T22,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- clk	=>  Location: PIN_L7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- nGRst	=>  Location: PIN_P8,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- dIn	=>  Location: PIN_R6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- dIn	=>  Location: PIN_T22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- err	=>  Location: PIN_L7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- clk	=>  Location: PIN_P8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- nGRst	=>  Location: PIN_R6,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF crcChecker_24bitSerial IS
@@ -64,9 +64,9 @@ SIGNAL ww_nGRst : std_logic;
 SIGNAL ww_clk : std_logic;
 SIGNAL ww_dIn : std_logic;
 SIGNAL ww_err : std_logic;
+SIGNAL \dIn~input_o\ : std_logic;
 SIGNAL \clk~input_o\ : std_logic;
 SIGNAL \nGRst~input_o\ : std_logic;
-SIGNAL \dIn~input_o\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_GND~I_combout\ : std_logic;
 
 BEGIN
@@ -79,7 +79,7 @@ ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
--- Location: IOOBUF_X89_Y6_N39
+-- Location: IOOBUF_X40_Y81_N36
 \err~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -92,7 +92,18 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_err);
 
--- Location: IOIBUF_X40_Y81_N35
+-- Location: IOIBUF_X89_Y6_N38
+\dIn~input\ : cyclonev_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_dIn,
+	o => \dIn~input_o\);
+
+-- Location: IOIBUF_X28_Y0_N18
 \clk~input\ : cyclonev_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -103,7 +114,7 @@ PORT MAP (
 	i => ww_clk,
 	o => \clk~input_o\);
 
--- Location: IOIBUF_X28_Y0_N18
+-- Location: IOIBUF_X2_Y0_N58
 \nGRst~input\ : cyclonev_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -113,17 +124,6 @@ GENERIC MAP (
 PORT MAP (
 	i => ww_nGRst,
 	o => \nGRst~input_o\);
-
--- Location: IOIBUF_X2_Y0_N58
-\dIn~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_dIn,
-	o => \dIn~input_o\);
 
 -- Location: LABCELL_X51_Y64_N3
 \~QUARTUS_CREATED_GND~I\ : cyclonev_lcell_comb
