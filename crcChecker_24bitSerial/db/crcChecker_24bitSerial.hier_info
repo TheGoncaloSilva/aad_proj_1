@@ -206,7 +206,7 @@ nGRst => dff_out[4].ACLR
 nGRst => dff_out[5].ACLR
 nGRst => dff_out[6].ACLR
 nGRst => dff_out[7].ACLR
-dIn => gateXor2:xor0.x2
+dIn => dff_out.IN1
 dOut[0] <= dff_out[0].DB_MAX_OUTPUT_PORT_TYPE
 dOut[1] <= dff_out[1].DB_MAX_OUTPUT_PORT_TYPE
 dOut[2] <= dff_out[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -215,36 +215,6 @@ dOut[4] <= dff_out[4].DB_MAX_OUTPUT_PORT_TYPE
 dOut[5] <= dff_out[5].DB_MAX_OUTPUT_PORT_TYPE
 dOut[6] <= dff_out[6].DB_MAX_OUTPUT_PORT_TYPE
 dOut[7] <= dff_out[7].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|gateXor2:xor0
-x1 => y.IN0
-x2 => y.IN1
-y <= y.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|gateXor2:xor1
-x1 => y.IN0
-x2 => y.IN1
-y <= y.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|gateXor2:xor2
-x1 => y.IN0
-x2 => y.IN1
-y <= y.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|gateXor2:xor3
-x1 => y.IN0
-x2 => y.IN1
-y <= y.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|gateXor2:xor4
-x1 => y.IN0
-x2 => y.IN1
-y <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |crcChecker_24bitSerial|comparator:comp
