@@ -10,6 +10,7 @@ If you don't know what **CRC** is, we suggest checking the following links with 
 * Computation of cyclic redundancy checks at [Wikipedia](https://en.wikipedia.org/wiki/Computation_of_cyclic_redundancy_checks)
 * Explanation for encoder by [Neso academy](https://www.youtube.com/watch?v=A9g6rTMblz4)
 * Explanation for checker by [Neso academy](https://www.youtube.com/watch?v=wQGwfBS3gpk)
+* CRC complete explanation by [University 4u](https://www.youtube.com/watch?v=bdFRCmzayyw)
 
 # Encoder
 
@@ -39,9 +40,9 @@ $$
 * $\text{Encoded Message} = 100100001$
 * $Q(x) = 111101$ ($\text{Message}_{\text{bits}}-1 = 5 \text{bits}$)
 
-## Remainder Algorithm
+## Remainder Properties
 
-Observing the design principles and following a remainder approach to solve the problem, the following equations were identified to reach the remainder:
+Observing the design principles, we chose to implement the  remainder properties, since this one allowed to have lower propagation delays and xor's, the following equations were identified to reach the remainder:
 
 Level 0:
 
@@ -89,16 +90,37 @@ $$
 (a_0 \oplus a_1) \oplus a_3
 $$
 
-In this example, there needs to be two levels of processing. One where $(a_0 \oplus a_1)$ is done and another where this result is **xor'ed** with $a_3$. The system can execute various xor's at each level. But the aim of optimizing is to reach the smaller amount of xor's needed, by taking advantage of multiple xor's needed. In our case, the theoretical value of xor's needed without optimizing would be 58 and 9 propagation delays and we managed to reduce the amount of xor's to 40 and **3-4 propagation delays(Será?)**.
+In this example, there needs to be two levels of processing. One where $(a_0 \oplus a_1)$ is done and another where this result is **xor'ed** with $a_3$. The system can execute various xor's at each level. But the aim of optimizing is to reach the smaller amount of xor's needed, by taking advantage of multiple xor's needed. In our case, the theoretical value of xor's needed without optimizing would be 58 and 9 propagation delays and we managed to reduce the amount of xor's to 40 and **3-4 propagation delays**.
 
-The exact simplifications conducted can be seen in this **spreadsheets (include hyperlink here)**
+The exact simplifications conducted can be seen in this **spreadsheets (include hyperlink here)**. This component was implemented using a **Parallel** implementation.
 
 # Checker
 
-The checker is a block that should take a 24-bit word and output one bit. This bit indicates if the message was received with (bit with value 1) or without errors (bit with value 0). Inherently the first 16 bits should represent the message itself and the following 8 bits, the computed CRC value.
+The checker is a block that should take a 24-bit word and output one bit. This bit indicates if the message was received with (bit with value 1) or without errors (bit with value 0). Inherently the first 16 bits should represent the message itself and the following 8 bits, the computed CRC value. Considering the previous encoder example, assuming that we received the correct encoded message **100100001**, the **Division Algorithm** would do the following calculations:
+$$
+\begin{array}{rl}
+100100001 & \underline{|\phantom{0}1101} \\
+\underline{\phantom{0}-1101} & |\phantom{0}111101 \\
+01000 \\
+\underline{\phantom{0}-1101} \\
+01010 \\
+\underline{\phantom{0}-1101} \\
+01110 \\
+\underline{\phantom{0}-1101} \\
+00110 \\
+\underline{\phantom{0}-0} \\
+001101 \\
+\underline{\phantom{0}-1101} \\
+000 \\
+\end{array}
+$$
+
+Since the **remainder** of the division is $0$, the Message was received without errors.
 
 ## Division Algorithm
 
-Observing the design principles and following a division algorithm approach to solve the problem, the following equations were identified to reach the remainder:
+Observing the design principles, we chose to implement the  division algorithm, since this one allowed to have lower propagation delays and xor's. This component was implemented using a **bit-serial** implementation, so that means that a control unit was used. This control unit can store up to 32 entries and is supplied by a 5 bit binary counter. This is done to be able to hold 24 counting states **?** and another one for comparison **?**.
 
-The bigger blocks for division algo are Linear Feedback Shift Registers
+THe algorithm itself by a **Linear Feedback Shift Registers**,which uses 8 Flip Flops and 5 Xor's. When the remainder is calculated, the result is read by our **Comparator** which compares essentially to $0$ (all the values are just **OR'ed**). The output of this block will indicate if there was any error.
+
+
