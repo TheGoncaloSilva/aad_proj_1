@@ -42,8 +42,8 @@ ARCHITECTURE structure OF crcChecker_24bitSerial IS
 			 c:    OUT STD_LOGIC_VECTOR (4 DOWNTO 0));
   END COMPONENT;
   COMPONENT LinarFeedback_ShiftRegister
-	 PORT (nGRst: IN STD_LOGIC;
-			 clk:   IN STD_LOGIC;
+	 PORT (clk:   IN STD_LOGIC;
+			 nGRst: IN STD_LOGIC;
 			 dIn:   IN STD_LOGIC;
 			 dOut:  OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
   END COMPONENT;
