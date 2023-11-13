@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simulation/qsim
 Ecrcchecker_24bitserial
-Z1 w1699721039
+Z1 w1699879712
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 3HQPc5MVbmOPN?>a5EBYj2
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -18,7 +18,7 @@ Z5 DPx8 cyclonev 19 cyclonev_components 0 22 jZ]H46BQLgIP5mfRTO`3B1
 Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ^Ch;U@;bMk1;>A2B<UV`k2
-!i122 18
+!i122 34
 R0
 Z9 8crcChecker_24bitSerial.vho
 Z10 FcrcChecker_24bitSerial.vho
@@ -28,9 +28,9 @@ V6MDZ?h:6L[1[C7RUSCS3J1
 !s100 z>SAVGA1Ym:Ek7;Gm:Eg]1
 Z11 OV;C;2020.1;71
 32
-Z12 !s110 1699721040
+Z12 !s110 1699879713
 !i10b 1
-Z13 !s108 1699721040.000000
+Z13 !s108 1699879713.000000
 Z14 !s90 -work|work|crcChecker_24bitSerial.vho|
 Z15 !s107 crcChecker_24bitSerial.vho|
 !i113 1
@@ -45,11 +45,11 @@ R6
 R7
 R8
 DEx4 work 22 crcchecker_24bitserial 0 22 6MDZ?h:6L[1[C7RUSCS3J1
-!i122 18
+!i122 34
 l72
 L53 87
-V`Y28R3`YjBXRlcenK=K^;1
-!s100 QmGXJImhUXSiSYbHRdG2O2
+VzT;1[l_oe2X7bo@D>G]U]3
+!s100 ]o<M3N??UmQ7<NRAf:QiU0
 R11
 32
 R12
@@ -61,15 +61,15 @@ R15
 R16
 R17
 Ecrcchecker_24bitserial_vhd_vec_tst
-Z18 w1699721038
+Z18 w1699879711
 R6
 R7
-!i122 19
+!i122 35
 R0
-Z19 8Waveform.vwf.vht
-Z20 FWaveform.vwf.vht
+Z19 8Waveform6.vwf.vht
+Z20 FWaveform6.vwf.vht
 l0
-L32 1
+Z21 L32 1
 V@]_Km^0:>4Xl8NnP?FZ8W1
 !s100 E=gJ`hOKj[4=Ka6?FFACc2
 R11
@@ -77,8 +77,8 @@ R11
 R12
 !i10b 1
 R13
-Z21 !s90 -work|work|Waveform.vwf.vht|
-Z22 !s107 Waveform.vwf.vht|
+Z22 !s90 -work|work|Waveform6.vwf.vht|
+!s107 Waveform6.vwf.vht|
 !i113 1
 R16
 R17
@@ -86,18 +86,114 @@ Acrcchecker_24bitserial_arch
 R6
 R7
 Z23 DEx4 work 34 crcchecker_24bitserial_vhd_vec_tst 0 22 @]_Km^0:>4Xl8NnP?FZ8W1
-!i122 19
+!i122 35
 l49
-Z24 L34 82
-Z25 Vj=ScjEGIzb>@LB4O@ciFh2
-Z26 !s100 GjTDXFTj;Wo@4M3VXUmOB2
+L34 82
+Vj=ScjEGIzb>@LB4O@ciFh2
+!s100 GjTDXFTj;Wo@4M3VXUmOB2
 R11
 32
 R12
 !i10b 1
 R13
-R21
 R22
+Z24 !s107 Waveform6.vwf.vht|
+!i113 1
+R16
+R17
+Elinarfeedback_shiftregister
+Z25 w1699877984
+R3
+R5
+R8
+R2
+Z26 DPx6 altera 11 dffeas_pack 0 22 dc5N=DKXMMTVYdUQ@D3FA2
+R4
+R6
+R7
+Z27 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
+!i122 28
+R0
+R9
+R10
+l0
+L39 1
+VZJ:4aM^4VHm]8AXbBkihE3
+!s100 Z]COB_3>Ub1ZSTJGM[h0X2
+R11
+32
+Z28 !s110 1699877984
+!i10b 1
+Z29 !s108 1699877984.000000
+R14
+R15
+!i113 1
+R16
+R17
+Astructure
+R3
+R5
+R8
+R2
+R26
+R4
+R6
+R7
+R27
+DEx4 work 27 linarfeedback_shiftregister 0 22 ZJ:4aM^4VHm]8AXbBkihE3
+!i122 28
+l103
+L62 543
+VAI8DBWcb[_hUk`XzB42NX2
+!s100 ^al9Q9;l56mGnNhS<>>9n3
+R11
+32
+R28
+!i10b 1
+R29
+R14
+R15
+!i113 1
+R16
+R17
+Elinarfeedback_shiftregister_vhd_vec_tst
+Z30 w1699877982
+R6
+R7
+!i122 29
+R0
+Z31 8Waveform4.vwf.vht
+Z32 FWaveform4.vwf.vht
+l0
+R21
+VNK;nCUg2:PmO`MnQn:F;]1
+!s100 UzG<G9ZeWb:KP]P[hA9611
+R11
+32
+R28
+!i10b 1
+R29
+Z33 !s90 -work|work|Waveform4.vwf.vht|
+Z34 !s107 Waveform4.vwf.vht|
+!i113 1
+R16
+R17
+Alinarfeedback_shiftregister_arch
+R6
+R7
+DEx4 work 39 linarfeedback_shiftregister_vhd_vec_tst 0 22 NK;nCUg2:PmO`MnQn:F;]1
+!i122 29
+l49
+L34 59
+VQKD1]dPe0X2HckU3Yg;lY1
+!s100 IOE[OYoY?Je=9JFVVdBha2
+R11
+32
+R28
+!i10b 1
+R29
+R33
+R34
 !i113 1
 R16
 R17

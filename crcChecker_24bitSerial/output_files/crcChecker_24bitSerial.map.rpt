@@ -1,5 +1,5 @@
 Analysis & Synthesis report for crcChecker_24bitSerial
-Sat Nov 11 16:49:08 2023
+Mon Nov 13 12:32:00 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -51,7 +51,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Nov 11 16:49:08 2023       ;
+; Analysis & Synthesis Status     ; Successful - Mon Nov 13 12:32:00 2023       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; crcChecker_24bitSerial                      ;
 ; Top-level Entity Name           ; crcChecker_24bitSerial                      ;
@@ -230,10 +230,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------+---------------------------------------------------+
 ; Register name                                  ; Reason for Removal                                ;
 +------------------------------------------------+---------------------------------------------------+
-; LinarFeedback_ShiftRegister:lsfr|dff_out[0..6] ; Stuck at GND due to stuck port data_in            ;
 ; binCounter_5bit:bc|flipFlopDPET:ff0|nQ         ; Merged with binCounter_5bit:bc|flipFlopDPET:ff0|Q ;
 ; flipFlopDPET:ffP|Q                             ; Stuck at VCC due to stuck port clock              ;
-; LinarFeedback_ShiftRegister:lsfr|dff_out[7]    ; Lost fanout                                       ;
+; LinarFeedback_ShiftRegister:lsfr|dff_out[0..7] ; Lost fanout                                       ;
 ; binCounter_5bit:bc|flipFlopDPET:ff0|Q          ; Lost fanout                                       ;
 ; binCounter_5bit:bc|flipFlopDPET:ff1|Q          ; Lost fanout                                       ;
 ; binCounter_5bit:bc|flipFlopDPET:ff2|Q          ; Lost fanout                                       ;
@@ -243,20 +242,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------+---------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                   ;
-+---------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; Register name                               ; Reason for Removal        ; Registers Removed due to This Register                                              ;
-+---------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; LinarFeedback_ShiftRegister:lsfr|dff_out[0] ; Stuck at GND              ; LinarFeedback_ShiftRegister:lsfr|dff_out[1],                                        ;
-;                                             ; due to stuck port data_in ; LinarFeedback_ShiftRegister:lsfr|dff_out[2], flipFlopDPET:ffP|Q,                    ;
-;                                             ;                           ; LinarFeedback_ShiftRegister:lsfr|dff_out[7], binCounter_5bit:bc|flipFlopDPET:ff0|Q, ;
-;                                             ;                           ; binCounter_5bit:bc|flipFlopDPET:ff1|Q, binCounter_5bit:bc|flipFlopDPET:ff2|Q,       ;
-;                                             ;                           ; binCounter_5bit:bc|flipFlopDPET:ff3|Q, binCounter_5bit:bc|flipFlopDPET:ff4|Q        ;
-; LinarFeedback_ShiftRegister:lsfr|dff_out[3] ; Stuck at GND              ; LinarFeedback_ShiftRegister:lsfr|dff_out[4],                                        ;
-;                                             ; due to stuck port data_in ; LinarFeedback_ShiftRegister:lsfr|dff_out[5],                                        ;
-;                                             ;                           ; LinarFeedback_ShiftRegister:lsfr|dff_out[6]                                         ;
-+---------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                        ;
++--------------------+-------------------------+-------------------------------------------------------------------------------------+
+; Register name      ; Reason for Removal      ; Registers Removed due to This Register                                              ;
++--------------------+-------------------------+-------------------------------------------------------------------------------------+
+; flipFlopDPET:ffP|Q ; Stuck at VCC            ; LinarFeedback_ShiftRegister:lsfr|dff_out[7],                                        ;
+;                    ; due to stuck port clock ; LinarFeedback_ShiftRegister:lsfr|dff_out[6],                                        ;
+;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|dff_out[5],                                        ;
+;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|dff_out[4],                                        ;
+;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|dff_out[3],                                        ;
+;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|dff_out[2],                                        ;
+;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|dff_out[1],                                        ;
+;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|dff_out[0], binCounter_5bit:bc|flipFlopDPET:ff0|Q, ;
+;                    ;                         ; binCounter_5bit:bc|flipFlopDPET:ff1|Q, binCounter_5bit:bc|flipFlopDPET:ff2|Q,       ;
+;                    ;                         ; binCounter_5bit:bc|flipFlopDPET:ff3|Q, binCounter_5bit:bc|flipFlopDPET:ff4|Q        ;
++--------------------+-------------------------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -363,7 +364,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Nov 11 16:49:01 2023
+    Info: Processing started: Mon Nov 13 12:31:52 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off crcChecker_24bitSerial -c crcChecker_24bitSerial
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -398,7 +399,7 @@ Info (12021): Found 6 design units, including 3 entities, in source file storeDe
     Info (12023): Found entity 2: FlipFlopD File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 33
     Info (12023): Found entity 3: binCounter_5bit File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 58
 Info (12021): Found 2 design units, including 1 entities, in source file LinarFeedback_ShiftRegister.vhd
-    Info (12022): Found design unit 1: LinarFeedback_ShiftRegister-structure File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/LinarFeedback_ShiftRegister.vhd Line: 13
+    Info (12022): Found design unit 1: LinarFeedback_ShiftRegister-structure File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/LinarFeedback_ShiftRegister.vhd Line: 11
     Info (12023): Found entity 1: LinarFeedback_ShiftRegister File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/LinarFeedback_ShiftRegister.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file comparator.vhd
     Info (12022): Found design unit 1: comparator-structure File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/comparator.vhd Line: 12
@@ -421,7 +422,7 @@ Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer control:con|contMem:cMem|prog~0 File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 16
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "err" is stuck at VCC File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 23
-Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (17049): 13 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
@@ -432,9 +433,9 @@ Info (21057): Implemented 4 device resources after synthesis - the final resourc
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 1 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 481 megabytes
-    Info: Processing ended: Sat Nov 11 16:49:08 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 487 megabytes
+    Info: Processing ended: Mon Nov 13 12:32:00 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 
