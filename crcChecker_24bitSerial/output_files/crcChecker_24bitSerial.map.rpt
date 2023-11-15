@@ -1,5 +1,5 @@
 Analysis & Synthesis report for crcChecker_24bitSerial
-Mon Nov 13 12:32:00 2023
+Wed Nov 15 23:05:18 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -51,7 +51,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Nov 13 12:32:00 2023       ;
+; Analysis & Synthesis Status     ; Successful - Wed Nov 15 23:05:18 2023       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; crcChecker_24bitSerial                      ;
 ; Top-level Entity Name           ; crcChecker_24bitSerial                      ;
@@ -163,8 +163,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -174,18 +174,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                             ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                      ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------+---------+
-; crcChecker_24bitSerial.vhd       ; yes             ; User VHDL File  ; /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd      ;         ;
-; simpleLogic.vhd                  ; yes             ; User VHDL File  ; /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd                 ;         ;
-; control.vhd                      ; yes             ; User VHDL File  ; /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/control.vhd                     ;         ;
-; storeDev.vhd                     ; yes             ; User VHDL File  ; /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd                    ;         ;
-; LinarFeedback_ShiftRegister.vhd  ; yes             ; User VHDL File  ; /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/LinarFeedback_ShiftRegister.vhd ;         ;
-; comparator.vhd                   ; yes             ; User VHDL File  ; /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/comparator.vhd                  ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+; crcChecker_24bitSerial.vhd       ; yes             ; User VHDL File  ; /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd      ;         ;
+; simpleLogic.vhd                  ; yes             ; User VHDL File  ; /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd                 ;         ;
+; control.vhd                      ; yes             ; User VHDL File  ; /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/control.vhd                     ;         ;
+; storeDev.vhd                     ; yes             ; User VHDL File  ; /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd                    ;         ;
+; LinarFeedback_ShiftRegister.vhd  ; yes             ; User VHDL File  ; /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/LinarFeedback_ShiftRegister.vhd ;         ;
+; comparator.vhd                   ; yes             ; User VHDL File  ; /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/comparator.vhd                  ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------+
@@ -225,39 +225,47 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                 ;
-+------------------------------------------------+---------------------------------------------------+
-; Register name                                  ; Reason for Removal                                ;
-+------------------------------------------------+---------------------------------------------------+
-; binCounter_5bit:bc|flipFlopDPET:ff0|nQ         ; Merged with binCounter_5bit:bc|flipFlopDPET:ff0|Q ;
-; flipFlopDPET:ffP|Q                             ; Stuck at VCC due to stuck port clock              ;
-; LinarFeedback_ShiftRegister:lsfr|dff_out[0..7] ; Lost fanout                                       ;
-; binCounter_5bit:bc|flipFlopDPET:ff0|Q          ; Lost fanout                                       ;
-; binCounter_5bit:bc|flipFlopDPET:ff1|Q          ; Lost fanout                                       ;
-; binCounter_5bit:bc|flipFlopDPET:ff2|Q          ; Lost fanout                                       ;
-; binCounter_5bit:bc|flipFlopDPET:ff3|Q          ; Lost fanout                                       ;
-; binCounter_5bit:bc|flipFlopDPET:ff4|Q          ; Lost fanout                                       ;
-; Total Number of Removed Registers = 15         ;                                                   ;
-+------------------------------------------------+---------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                   ;
++--------------------------------------------------+---------------------------------------------------+
+; Register name                                    ; Reason for Removal                                ;
++--------------------------------------------------+---------------------------------------------------+
+; binCounter_5bit:bc|flipFlopDPET:ff0|nQ           ; Merged with binCounter_5bit:bc|flipFlopDPET:ff0|Q ;
+; flipFlopDPET:ffP|Q                               ; Stuck at VCC due to stuck port clock              ;
+; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff1|Q ; Lost fanout                                       ;
+; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff2|Q ; Lost fanout                                       ;
+; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff3|Q ; Lost fanout                                       ;
+; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff4|Q ; Lost fanout                                       ;
+; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff5|Q ; Lost fanout                                       ;
+; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff6|Q ; Lost fanout                                       ;
+; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff7|Q ; Lost fanout                                       ;
+; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff8|Q ; Lost fanout                                       ;
+; binCounter_5bit:bc|flipFlopDPET:ff0|Q            ; Lost fanout                                       ;
+; binCounter_5bit:bc|flipFlopDPET:ff1|Q            ; Lost fanout                                       ;
+; binCounter_5bit:bc|flipFlopDPET:ff2|Q            ; Lost fanout                                       ;
+; binCounter_5bit:bc|flipFlopDPET:ff3|Q            ; Lost fanout                                       ;
+; binCounter_5bit:bc|flipFlopDPET:ff4|Q            ; Lost fanout                                       ;
+; Total Number of Removed Registers = 15           ;                                                   ;
++--------------------------------------------------+---------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                        ;
-+--------------------+-------------------------+-------------------------------------------------------------------------------------+
-; Register name      ; Reason for Removal      ; Registers Removed due to This Register                                              ;
-+--------------------+-------------------------+-------------------------------------------------------------------------------------+
-; flipFlopDPET:ffP|Q ; Stuck at VCC            ; LinarFeedback_ShiftRegister:lsfr|dff_out[7],                                        ;
-;                    ; due to stuck port clock ; LinarFeedback_ShiftRegister:lsfr|dff_out[6],                                        ;
-;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|dff_out[5],                                        ;
-;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|dff_out[4],                                        ;
-;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|dff_out[3],                                        ;
-;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|dff_out[2],                                        ;
-;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|dff_out[1],                                        ;
-;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|dff_out[0], binCounter_5bit:bc|flipFlopDPET:ff0|Q, ;
-;                    ;                         ; binCounter_5bit:bc|flipFlopDPET:ff1|Q, binCounter_5bit:bc|flipFlopDPET:ff2|Q,       ;
-;                    ;                         ; binCounter_5bit:bc|flipFlopDPET:ff3|Q, binCounter_5bit:bc|flipFlopDPET:ff4|Q        ;
-+--------------------+-------------------------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                  ;
++--------------------+-------------------------+-------------------------------------------------------------------------------+
+; Register name      ; Reason for Removal      ; Registers Removed due to This Register                                        ;
++--------------------+-------------------------+-------------------------------------------------------------------------------+
+; flipFlopDPET:ffP|Q ; Stuck at VCC            ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff1|Q,                             ;
+;                    ; due to stuck port clock ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff2|Q,                             ;
+;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff3|Q,                             ;
+;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff4|Q,                             ;
+;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff5|Q,                             ;
+;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff6|Q,                             ;
+;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff7|Q,                             ;
+;                    ;                         ; LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff8|Q,                             ;
+;                    ;                         ; binCounter_5bit:bc|flipFlopDPET:ff0|Q, binCounter_5bit:bc|flipFlopDPET:ff1|Q, ;
+;                    ;                         ; binCounter_5bit:bc|flipFlopDPET:ff2|Q, binCounter_5bit:bc|flipFlopDPET:ff3|Q, ;
+;                    ;                         ; binCounter_5bit:bc|flipFlopDPET:ff4|Q                                         ;
++--------------------+-------------------------+-------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -364,78 +372,79 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 13 12:31:52 2023
+    Info: Processing started: Wed Nov 15 23:05:12 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off crcChecker_24bitSerial -c crcChecker_24bitSerial
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file crcChecker_24bitSerial.vhd
-    Info (12022): Found design unit 1: crcChecker_24bitSerial-structure File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 26
-    Info (12023): Found entity 1: crcChecker_24bitSerial File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 19
+    Info (12022): Found design unit 1: crcChecker_24bitSerial-structure File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 26
+    Info (12023): Found entity 1: crcChecker_24bitSerial File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 19
 Info (12021): Found 14 design units, including 7 entities, in source file simpleLogic.vhd
-    Info (12022): Found design unit 1: gateAnd2-logicFunction File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 10
-    Info (12022): Found design unit 2: gateOr2-logicFunction File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 24
-    Info (12022): Found design unit 3: gateNand2-logicFunction File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 38
-    Info (12022): Found design unit 4: gateNor2-logicFunction File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 52
-    Info (12022): Found design unit 5: gateXor2-logicFunction File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 66
-    Info (12022): Found design unit 6: halfAdder_1bit-structure File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 83
-    Info (12022): Found design unit 7: halfAdder_5bit-structure File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 108
-    Info (12023): Found entity 1: gateAnd2 File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 5
-    Info (12023): Found entity 2: gateOr2 File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 19
-    Info (12023): Found entity 3: gateNand2 File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 33
-    Info (12023): Found entity 4: gateNor2 File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 47
-    Info (12023): Found entity 5: gateXor2 File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 61
-    Info (12023): Found entity 6: halfAdder_1bit File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 78
-    Info (12023): Found entity 7: halfAdder_5bit File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 101
+    Info (12022): Found design unit 1: gateAnd2-logicFunction File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 10
+    Info (12022): Found design unit 2: gateOr2-logicFunction File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 24
+    Info (12022): Found design unit 3: gateNand2-logicFunction File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 38
+    Info (12022): Found design unit 4: gateNor2-logicFunction File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 52
+    Info (12022): Found design unit 5: gateXor2-logicFunction File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 66
+    Info (12022): Found design unit 6: halfAdder_1bit-structure File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 83
+    Info (12022): Found design unit 7: halfAdder_5bit-structure File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 108
+    Info (12023): Found entity 1: gateAnd2 File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 5
+    Info (12023): Found entity 2: gateOr2 File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 19
+    Info (12023): Found entity 3: gateNand2 File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 33
+    Info (12023): Found entity 4: gateNor2 File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 47
+    Info (12023): Found entity 5: gateXor2 File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 61
+    Info (12023): Found entity 6: halfAdder_1bit File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 78
+    Info (12023): Found entity 7: halfAdder_5bit File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simpleLogic.vhd Line: 101
 Info (12021): Found 4 design units, including 2 entities, in source file control.vhd
-    Info (12022): Found design unit 1: contMem-behavior File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 12
-    Info (12022): Found design unit 2: control-structure File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 71
-    Info (12023): Found entity 1: contMem File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 7
-    Info (12023): Found entity 2: control File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 62
+    Info (12022): Found design unit 1: contMem-behavior File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 12
+    Info (12022): Found design unit 2: control-structure File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 71
+    Info (12023): Found entity 1: contMem File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 7
+    Info (12023): Found entity 2: control File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 62
 Info (12021): Found 6 design units, including 3 entities, in source file storeDev.vhd
-    Info (12022): Found design unit 1: flipFlopDPET-behavior File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 11
-    Info (12022): Found design unit 2: FlipFlopD-structure File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 39
-    Info (12022): Found design unit 3: binCounter_5bit-structure File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 64
-    Info (12023): Found entity 1: flipFlopDPET File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 5
-    Info (12023): Found entity 2: FlipFlopD File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 33
-    Info (12023): Found entity 3: binCounter_5bit File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 58
+    Info (12022): Found design unit 1: flipFlopDPET-behavior File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 11
+    Info (12022): Found design unit 2: FlipFlopD-structure File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 39
+    Info (12022): Found design unit 3: binCounter_5bit-structure File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 64
+    Info (12023): Found entity 1: flipFlopDPET File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 5
+    Info (12023): Found entity 2: FlipFlopD File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 33
+    Info (12023): Found entity 3: binCounter_5bit File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 58
 Info (12021): Found 2 design units, including 1 entities, in source file LinarFeedback_ShiftRegister.vhd
-    Info (12022): Found design unit 1: LinarFeedback_ShiftRegister-structure File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/LinarFeedback_ShiftRegister.vhd Line: 11
-    Info (12023): Found entity 1: LinarFeedback_ShiftRegister File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/LinarFeedback_ShiftRegister.vhd Line: 4
+    Info (12022): Found design unit 1: LinarFeedback_ShiftRegister-structure File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/LinarFeedback_ShiftRegister.vhd Line: 13
+    Info (12023): Found entity 1: LinarFeedback_ShiftRegister File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/LinarFeedback_ShiftRegister.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file comparator.vhd
-    Info (12022): Found design unit 1: comparator-structure File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/comparator.vhd Line: 12
-    Info (12023): Found entity 1: comparator File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/comparator.vhd Line: 7
+    Info (12022): Found design unit 1: comparator-structure File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/comparator.vhd Line: 12
+    Info (12023): Found entity 1: comparator File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/comparator.vhd Line: 7
 Info (12127): Elaborating entity "crcChecker_24bitSerial" for the top level hierarchy
-Info (12128): Elaborating entity "binCounter_5bit" for hierarchy "binCounter_5bit:bc" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 63
-Info (12128): Elaborating entity "gateAnd2" for hierarchy "binCounter_5bit:bc|gateAnd2:ad1" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 83
-Info (12128): Elaborating entity "gateXor2" for hierarchy "binCounter_5bit:bc|gateXor2:xr1" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 86
-Info (12128): Elaborating entity "flipFlopDPET" for hierarchy "binCounter_5bit:bc|flipFlopDPET:ff0" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 90
-Info (12128): Elaborating entity "control" for hierarchy "control:con" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 64
-Info (12128): Elaborating entity "contMem" for hierarchy "control:con|contMem:cMem" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 87
-Info (12128): Elaborating entity "gateNand2" for hierarchy "control:con|gateNand2:nad1" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 88
-Info (12128): Elaborating entity "gateNor2" for hierarchy "control:con|gateNor2:nord" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 92
-Info (12128): Elaborating entity "LinarFeedback_ShiftRegister" for hierarchy "LinarFeedback_ShiftRegister:lsfr" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 65
-Info (12128): Elaborating entity "comparator" for hierarchy "comparator:comp" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 66
-Info (12128): Elaborating entity "gateOr2" for hierarchy "comparator:comp|gateOr2:or1" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/comparator.vhd Line: 20
+Info (12128): Elaborating entity "binCounter_5bit" for hierarchy "binCounter_5bit:bc" File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 63
+Info (12128): Elaborating entity "gateAnd2" for hierarchy "binCounter_5bit:bc|gateAnd2:ad1" File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 83
+Info (12128): Elaborating entity "gateXor2" for hierarchy "binCounter_5bit:bc|gateXor2:xr1" File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 86
+Info (12128): Elaborating entity "flipFlopDPET" for hierarchy "binCounter_5bit:bc|flipFlopDPET:ff0" File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/storeDev.vhd Line: 90
+Info (12128): Elaborating entity "control" for hierarchy "control:con" File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 64
+Info (12128): Elaborating entity "contMem" for hierarchy "control:con|contMem:cMem" File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 87
+Info (12128): Elaborating entity "gateNand2" for hierarchy "control:con|gateNand2:nad1" File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 88
+Info (12128): Elaborating entity "gateNor2" for hierarchy "control:con|gateNor2:nord" File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 92
+Info (12128): Elaborating entity "LinarFeedback_ShiftRegister" for hierarchy "LinarFeedback_ShiftRegister:lsfr" File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 65
+Info (12128): Elaborating entity "FlipFlopD" for hierarchy "LinarFeedback_ShiftRegister:lsfr|FlipFlopD:ff1" File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/LinarFeedback_ShiftRegister.vhd Line: 33
+Info (12128): Elaborating entity "comparator" for hierarchy "comparator:comp" File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 66
+Info (12128): Elaborating entity "gateOr2" for hierarchy "comparator:comp|gateOr2:or1" File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/comparator.vhd Line: 20
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "control:con|contMem:cMem|prog" is uninferred due to inappropriate RAM size File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 16
+    Info (276004): RAM logic "control:con|contMem:cMem|prog" is uninferred due to inappropriate RAM size File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 16
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer control:con|contMem:cMem|prog~0 File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 16
+    Warning (19017): Found clock multiplexer control:con|contMem:cMem|prog~0 File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/control.vhd Line: 16
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "err" is stuck at VCC File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 23
+    Warning (13410): Pin "err" is stuck at VCC File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 23
 Info (17049): 13 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 21
-    Warning (15610): No output dependent on input pin "nGRst" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 20
-    Warning (15610): No output dependent on input pin "dIn" File: /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 22
+    Warning (15610): No output dependent on input pin "clk" File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 21
+    Warning (15610): No output dependent on input pin "nGRst" File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 20
+    Warning (15610): No output dependent on input pin "dIn" File: /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/crcChecker_24bitSerial.vhd Line: 22
 Info (21057): Implemented 4 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 1 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 487 megabytes
-    Info: Processing ended: Mon Nov 13 12:32:00 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 475 megabytes
+    Info: Processing ended: Wed Nov 15 23:05:18 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:16
 
 

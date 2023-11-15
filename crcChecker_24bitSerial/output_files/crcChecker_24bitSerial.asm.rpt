@@ -1,5 +1,5 @@
 Assembler report for crcChecker_24bitSerial
-Mon Nov 13 12:32:32 2023
+Wed Nov 15 23:05:49 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Nov 13 12:32:32 2023 ;
+; Assembler Status      ; Successful - Wed Nov 15 23:05:49 2023 ;
 ; Revision Name         ; crcChecker_24bitSerial                ;
 ; Top-level Entity Name ; crcChecker_24bitSerial                ;
 ; Family                ; Cyclone V                             ;
@@ -53,13 +53,13 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                 ;
-+-----------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                 ;
-+-----------------------------------------------------------------------------------------------------------+
-; /home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/output_files/crcChecker_24bitSerial.sof ;
-+-----------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                     ;
++-----------------------------------------------------------------------------------------------+
+; File Name                                                                                     ;
++-----------------------------------------------------------------------------------------------+
+; /home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/output_files/crcChecker_24bitSerial.sof ;
++-----------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 13 12:32:27 2023
+    Info: Processing started: Wed Nov 15 23:05:42 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off crcChecker_24bitSerial -c crcChecker_24bitSerial
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 499 megabytes
-    Info: Processing ended: Mon Nov 13 12:32:32 2023
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 502 megabytes
+    Info: Processing ended: Wed Nov 15 23:05:49 2023
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:06
 
 
