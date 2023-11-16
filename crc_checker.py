@@ -36,8 +36,14 @@ bx: str = '110100111' # key
 crc: str = calculate_crc(ax, bx)
 print(f"CRC Remainder: {crc}") # should be 11101000
 
-# Check crc 1
+# Check crc 2
 ax: str = '101010101010101001110100' # data with CRC
 bx: str = '110100111' # key
 res: str = check_crc(ax, bx)
 print(f"CRC Remainder: {res}") # should be 0
+
+# Calculate crc 3
+ax: str = '1001111010010111' # data without CRC
+bx: str = '110100111' # key
+crc: str = calculate_crc(ax, bx)
+print(f"CRC Remainder: {crc}") # should be 00011110
