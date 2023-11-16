@@ -46,7 +46,7 @@ BEGIN
 	xor20: gateXOr2 PORT MAP (l1(0),  l1(4),  l2(3));
 	xor21: gateXOr2 PORT MAP (l1(1),  l1(6),  l2(4));
 	xor22: gateXOr2 PORT MAP (l1(4),  l1(9),  l2(5));
-	xor23: gateXOr2 PORT MAP (l1(10),  l1(13),  l2(6));
+	xor23: gateXOr2 PORT MAP (l1(10),  input(10),  l2(6));
 	xor24: gateXOr2 PORT MAP (l1(3),  l1(11),  l2(7));
 	xor25: gateXOr2 PORT MAP (l1(5),  l1(6),  l2(8));
 	xor26: gateXOr2 PORT MAP (l1(2),  l1(4),  l2(9));

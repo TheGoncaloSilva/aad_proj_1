@@ -1,5 +1,5 @@
 Fitter report for cyclicRecCheck_24bitParallel
-Thu Nov  9 11:39:22 2023
+Thu Nov 16 17:25:30 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu Nov  9 11:39:22 2023       ;
+; Fitter Status                   ; Successful - Thu Nov 16 17:25:30 2023       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; cyclicRecCheck_24bitParallel                ;
 ; Top-level Entity Name           ; cyclicRecCheck_24bitParallel                ;
@@ -226,10 +226,10 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 ;                                                             ;                    ;       ;
 ; Combinational ALUT usage for logic                          ; 16                 ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 1                  ;       ;
+;     -- 6 input functions                                    ; 0                  ;       ;
 ;     -- 5 input functions                                    ; 5                  ;       ;
-;     -- 4 input functions                                    ; 5                  ;       ;
-;     -- <=3 input functions                                  ; 5                  ;       ;
+;     -- 4 input functions                                    ; 7                  ;       ;
+;     -- <=3 input functions                                  ; 4                  ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Dedicated logic registers                                   ; 0                  ;       ;
@@ -273,11 +273,11 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.4% / 0.4% / 0.3% ;       ;
-; Maximum fan-out                                             ; 6                  ;       ;
-; Highest non-global fan-out                                  ; 6                  ;       ;
-; Total fan-out                                               ; 127                ;       ;
-; Average fan-out                                             ; 1.32               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.3% / 0.4% / 0.3% ;       ;
+; Maximum fan-out                                             ; 5                  ;       ;
+; Highest non-global fan-out                                  ; 5                  ;       ;
+; Total fan-out                                               ; 126                ;       ;
+; Average fan-out                                             ; 1.31               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -308,10 +308,10 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 ;                                                             ;                     ;                                ;
 ; Combinational ALUT usage for logic                          ; 16                  ; 0                              ;
 ;     -- 7 input functions                                    ; 0                   ; 0                              ;
-;     -- 6 input functions                                    ; 1                   ; 0                              ;
+;     -- 6 input functions                                    ; 0                   ; 0                              ;
 ;     -- 5 input functions                                    ; 5                   ; 0                              ;
-;     -- 4 input functions                                    ; 5                   ; 0                              ;
-;     -- <=3 input functions                                  ; 5                   ; 0                              ;
+;     -- 4 input functions                                    ; 7                   ; 0                              ;
+;     -- <=3 input functions                                  ; 4                   ; 0                              ;
 ; Combinational ALUT usage for route-throughs                 ; 0                   ; 0                              ;
 ; Memory ALUT usage                                           ; 0                   ; 0                              ;
 ;     -- 64-address deep                                      ; 0                   ; 0                              ;
@@ -339,7 +339,7 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 ;     -- Registered Output Connections                        ; 0                   ; 0                              ;
 ;                                                             ;                     ;                                ;
 ; Internal Connections                                        ;                     ;                                ;
-;     -- Total Connections                                    ; 127                 ; 0                              ;
+;     -- Total Connections                                    ; 126                 ; 0                              ;
 ;     -- Registered Connections                               ; 0                   ; 0                              ;
 ;                                                             ;                     ;                                ;
 ; External Connections                                        ;                     ;                                ;
@@ -372,22 +372,22 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; fInput[0]  ; V16   ; 4A       ; 64           ; 0            ; 17           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; fInput[10] ; AB18  ; 4A       ; 56           ; 0            ; 34           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; fInput[11] ; AB17  ; 4A       ; 56           ; 0            ; 51           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; fInput[12] ; Y19   ; 4A       ; 66           ; 0            ; 40           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; fInput[13] ; Y22   ; 4A       ; 66           ; 0            ; 91           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; fInput[14] ; AA18  ; 4A       ; 60           ; 0            ; 34           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; fInput[15] ; AA15  ; 4A       ; 54           ; 0            ; 34           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; fInput[1]  ; U13   ; 4A       ; 50           ; 0            ; 40           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; fInput[2]  ; P14   ; 4A       ; 68           ; 0            ; 17           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; fInput[3]  ; V20   ; 4A       ; 62           ; 0            ; 17           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; fInput[4]  ; Y17   ; 4A       ; 58           ; 0            ; 40           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; fInput[5]  ; W19   ; 4A       ; 62           ; 0            ; 0            ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; fInput[6]  ; T12   ; 4A       ; 52           ; 0            ; 17           ; 6                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; fInput[7]  ; V19   ; 4A       ; 70           ; 0            ; 17           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; fInput[8]  ; W21   ; 4A       ; 68           ; 0            ; 34           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; fInput[9]  ; V14   ; 4A       ; 56           ; 0            ; 17           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[0]  ; Y19   ; 4A       ; 66           ; 0            ; 40           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[10] ; V15   ; 4A       ; 56           ; 0            ; 0            ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[11] ; AB21  ; 4A       ; 58           ; 0            ; 74           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[12] ; AA13  ; 4A       ; 52           ; 0            ; 34           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[13] ; AA19  ; 4A       ; 62           ; 0            ; 51           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[14] ; AB12  ; 4A       ; 50           ; 0            ; 74           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[15] ; W21   ; 4A       ; 68           ; 0            ; 34           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[1]  ; Y16   ; 4A       ; 58           ; 0            ; 57           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[2]  ; V19   ; 4A       ; 70           ; 0            ; 17           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[3]  ; AA22  ; 4A       ; 64           ; 0            ; 34           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[4]  ; W19   ; 4A       ; 62           ; 0            ; 0            ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[5]  ; Y20   ; 4A       ; 66           ; 0            ; 57           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[6]  ; V16   ; 4A       ; 64           ; 0            ; 17           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[7]  ; AB15  ; 4A       ; 54           ; 0            ; 51           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[8]  ; AA15  ; 4A       ; 54           ; 0            ; 34           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; fInput[9]  ; U22   ; 4A       ; 70           ; 0            ; 51           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -396,30 +396,30 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 +-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; fOutput[0]  ; AA20  ; 4A       ; 62           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[10] ; U22   ; 4A       ; 70           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[11] ; AA22  ; 4A       ; 64           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[12] ; Y16   ; 4A       ; 58           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[13] ; AA19  ; 4A       ; 62           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[14] ; T13   ; 4A       ; 52           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[15] ; V18   ; 4A       ; 70           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[16] ; R14   ; 4A       ; 68           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[17] ; V15   ; 4A       ; 56           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[18] ; AA13  ; 4A       ; 52           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[19] ; Y14   ; 4A       ; 54           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[1]  ; AA17  ; 4A       ; 60           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[20] ; Y21   ; 4A       ; 68           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[21] ; Y20   ; 4A       ; 66           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[22] ; T14   ; 4A       ; 60           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[23] ; Y15   ; 4A       ; 54           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[2]  ; AB21  ; 4A       ; 58           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[3]  ; W22   ; 4A       ; 66           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[0]  ; AB22  ; 4A       ; 64           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[10] ; V18   ; 4A       ; 70           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[11] ; W16   ; 4A       ; 64           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[12] ; V20   ; 4A       ; 62           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[13] ; Y22   ; 4A       ; 66           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[14] ; W22   ; 4A       ; 66           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[15] ; Y15   ; 4A       ; 54           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[16] ; Y14   ; 4A       ; 54           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[17] ; P14   ; 4A       ; 68           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[18] ; AB17  ; 4A       ; 56           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[19] ; AB20  ; 4A       ; 58           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[1]  ; V14   ; 4A       ; 56           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[20] ; T12   ; 4A       ; 52           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[21] ; AA20  ; 4A       ; 62           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[22] ; V13   ; 4A       ; 50           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[23] ; R14   ; 4A       ; 68           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[2]  ; AA14  ; 4A       ; 52           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[3]  ; AB18  ; 4A       ; 56           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; fOutput[4]  ; U15   ; 4A       ; 60           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[5]  ; AB22  ; 4A       ; 64           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[6]  ; AB15  ; 4A       ; 54           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[7]  ; AB20  ; 4A       ; 58           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[8]  ; W16   ; 4A       ; 64           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; fOutput[9]  ; AA14  ; 4A       ; 52           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[5]  ; AA18  ; 4A       ; 60           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[6]  ; T14   ; 4A       ; 60           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[7]  ; AA17  ; 4A       ; 60           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[8]  ; Y21   ; 4A       ; 68           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; fOutput[9]  ; Y17   ; 4A       ; 58           ; 0            ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -480,16 +480,16 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 ; AA10     ; 113        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA11     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA12     ; 131        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA13     ; 139        ; 4A       ; fOutput[18]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AA14     ; 137        ; 4A       ; fOutput[9]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AA15     ; 142        ; 4A       ; fInput[15]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AA13     ; 139        ; 4A       ; fInput[12]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AA14     ; 137        ; 4A       ; fOutput[2]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AA15     ; 142        ; 4A       ; fInput[8]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AA16     ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AA17     ; 153        ; 4A       ; fOutput[1]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AA18     ; 155        ; 4A       ; fInput[14]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AA19     ; 156        ; 4A       ; fOutput[13]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AA20     ; 158        ; 4A       ; fOutput[0]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AA17     ; 153        ; 4A       ; fOutput[7]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AA18     ; 155        ; 4A       ; fOutput[5]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AA19     ; 156        ; 4A       ; fInput[13]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AA20     ; 158        ; 4A       ; fOutput[21]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AA21     ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AA22     ; 163        ; 4A       ; fOutput[11]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AA22     ; 163        ; 4A       ; fInput[3]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AB1      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB2      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB3      ; 49         ; 3A       ; ^AS_DATA1, DATA1                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
@@ -501,17 +501,17 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 ; AB9      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB10     ; 124        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB11     ; 126        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AB12     ; 134        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AB12     ; 134        ; 4A       ; fInput[14]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AB13     ; 132        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB14     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AB15     ; 140        ; 4A       ; fOutput[6]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AB15     ; 140        ; 4A       ; fInput[7]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AB16     ;            ; 4A       ; VREFB4AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; AB17     ; 145        ; 4A       ; fInput[11]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AB18     ; 147        ; 4A       ; fInput[10]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AB17     ; 145        ; 4A       ; fOutput[18]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AB18     ; 147        ; 4A       ; fOutput[3]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AB19     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AB20     ; 148        ; 4A       ; fOutput[7]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AB21     ; 150        ; 4A       ; fOutput[2]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AB22     ; 161        ; 4A       ; fOutput[5]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AB20     ; 148        ; 4A       ; fOutput[19]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AB21     ; 150        ; 4A       ; fInput[11]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AB22     ; 161        ; 4A       ; fOutput[0]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; B1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B3       ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -789,7 +789,7 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 ; P11      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; P12      ; 123        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; P13      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; P14      ; 168        ; 4A       ; fInput[2]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; P14      ; 168        ; 4A       ; fOutput[17]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; P15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; P16      ; 225        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; P17      ; 227        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -811,7 +811,7 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 ; R11      ; 127        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; R12      ; 121        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; R13      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; R14      ; 170        ; 4A       ; fOutput[16]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; R14      ; 170        ; 4A       ; fOutput[23]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; R15      ; 219        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; R16      ; 221        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; R17      ; 223        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -831,9 +831,9 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 ; T9       ; 109        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; T10      ; 117        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; T11      ;            ; 3B       ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; T12      ; 136        ; 4A       ; fInput[6]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; T13      ; 138        ; 4A       ; fOutput[14]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; T14      ; 152        ; 4A       ; fOutput[22]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; T12      ; 136        ; 4A       ; fOutput[20]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; T13      ; 138        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; T14      ; 152        ; 4A       ; fOutput[6]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; T15      ; 217        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; T16      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; T17      ; 215        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -854,7 +854,7 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 ; U10      ; 111        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; U11      ; 120        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; U12      ; 122        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; U13      ; 135        ; 4A       ; fInput[1]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; U13      ; 135        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; U14      ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; U15      ; 154        ; 4A       ; fOutput[4]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; U16      ; 176        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -863,7 +863,7 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 ; U19      ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; U20      ; 179        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; U21      ; 177        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; U22      ; 172        ; 4A       ; fOutput[10]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; U22      ; 172        ; 4A       ; fInput[9]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; V1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V3       ; 50         ; 3A       ; ^DCLK                           ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
@@ -876,14 +876,14 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 ; V10      ; 103        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V11      ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V12      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; V13      ; 133        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; V14      ; 144        ; 4A       ; fInput[9]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; V15      ; 146        ; 4A       ; fOutput[17]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; V16      ; 160        ; 4A       ; fInput[0]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; V13      ; 133        ; 4A       ; fOutput[22]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; V14      ; 144        ; 4A       ; fOutput[1]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; V15      ; 146        ; 4A       ; fInput[10]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; V16      ; 160        ; 4A       ; fInput[6]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; V17      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; V18      ; 175        ; 4A       ; fOutput[15]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; V19      ; 173        ; 4A       ; fInput[7]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; V20      ; 157        ; 4A       ; fInput[3]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; V18      ; 175        ; 4A       ; fOutput[10]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; V19      ; 173        ; 4A       ; fInput[2]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; V20      ; 157        ; 4A       ; fOutput[12]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; V21      ; 174        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V22      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; W1       ; 35         ; B0L      ; GND                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -901,13 +901,13 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 ; W13      ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; W14      ;            ; 3B, 4A   ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; W15      ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; W16      ; 162        ; 4A       ; fOutput[8]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; W16      ; 162        ; 4A       ; fOutput[11]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; W17      ;            ; 3B, 4A   ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; W18      ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; W19      ; 159        ; 4A       ; fInput[5]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; W19      ; 159        ; 4A       ; fInput[4]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; W20      ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; W21      ; 171        ; 4A       ; fInput[8]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; W22      ; 166        ; 4A       ; fOutput[3]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; W21      ; 171        ; 4A       ; fInput[15]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; W22      ; 166        ; 4A       ; fOutput[14]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; Y1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y3       ; 36         ; B0L      ; GXB_NC                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -921,15 +921,15 @@ The pin-out file can be found in /home/catarina/Documents/GitHub/aad_proj_1/cycl
 ; Y11      ; 129        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y12      ;            ; 3B       ; VREFB3BN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y13      ;            ; 3B       ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; Y14      ; 141        ; 4A       ; fOutput[19]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; Y15      ; 143        ; 4A       ; fOutput[23]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; Y16      ; 149        ; 4A       ; fOutput[12]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; Y17      ; 151        ; 4A       ; fInput[4]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; Y14      ; 141        ; 4A       ; fOutput[16]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; Y15      ; 143        ; 4A       ; fOutput[15]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; Y16      ; 149        ; 4A       ; fInput[1]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; Y17      ; 151        ; 4A       ; fOutput[9]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; Y18      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; Y19      ; 167        ; 4A       ; fInput[12]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; Y20      ; 165        ; 4A       ; fOutput[21]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; Y21      ; 169        ; 4A       ; fOutput[20]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; Y22      ; 164        ; 4A       ; fInput[13]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; Y19      ; 167        ; 4A       ; fInput[0]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; Y20      ; 165        ; 4A       ; fInput[5]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; Y21      ; 169        ; 4A       ; fOutput[8]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; Y22      ; 164        ; 4A       ; fOutput[13]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 +----------+------------+----------+---------------------------------+--------+--------------+---------------------+--------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
@@ -965,12 +965,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; fOutput[23] ; Incomplete set of assignments ;
 ; fInput[8]   ; Incomplete set of assignments ;
 ; fInput[13]  ; Incomplete set of assignments ;
+; fInput[0]   ; Incomplete set of assignments ;
+; fInput[2]   ; Incomplete set of assignments ;
 ; fInput[4]   ; Incomplete set of assignments ;
 ; fInput[6]   ; Incomplete set of assignments ;
 ; fInput[1]   ; Incomplete set of assignments ;
 ; fInput[14]  ; Incomplete set of assignments ;
-; fInput[0]   ; Incomplete set of assignments ;
-; fInput[2]   ; Incomplete set of assignments ;
 ; fInput[9]   ; Incomplete set of assignments ;
 ; fInput[15]  ; Incomplete set of assignments ;
 ; fInput[7]   ; Incomplete set of assignments ;
@@ -1005,12 +1005,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; fOutput[23] ; Missing location assignment   ;
 ; fInput[8]   ; Missing location assignment   ;
 ; fInput[13]  ; Missing location assignment   ;
+; fInput[0]   ; Missing location assignment   ;
+; fInput[2]   ; Missing location assignment   ;
 ; fInput[4]   ; Missing location assignment   ;
 ; fInput[6]   ; Missing location assignment   ;
 ; fInput[1]   ; Missing location assignment   ;
 ; fInput[14]  ; Missing location assignment   ;
-; fInput[0]   ; Missing location assignment   ;
-; fInput[2]   ; Missing location assignment   ;
 ; fInput[9]   ; Missing location assignment   ;
 ; fInput[15]  ; Missing location assignment   ;
 ; fInput[7]   ; Missing location assignment   ;
@@ -1027,16 +1027,17 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------------------------------+------------------------------+--------------+
 ; Compilation Hierarchy Node             ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Entity Name                  ; Library Name ;
 +----------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------------------------------+------------------------------+--------------+
-; |cyclicRecCheck_24bitParallel          ; 8.5 (0.5)            ; 9.0 (0.5)                        ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 16 (1)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 40   ; 0            ; |cyclicRecCheck_24bitParallel                                                  ; cyclicRecCheck_24bitParallel ; work         ;
-;    |remainder_algorithm:remainderAlgo| ; 8.0 (0.0)            ; 8.5 (0.0)                        ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 15 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo                ; remainder_algorithm          ; work         ;
+; |cyclicRecCheck_24bitParallel          ; 8.5 (0.5)            ; 8.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 16 (1)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 40   ; 0            ; |cyclicRecCheck_24bitParallel                                                  ; cyclicRecCheck_24bitParallel ; work         ;
+;    |remainder_algorithm:remainderAlgo| ; 8.0 (0.0)            ; 8.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 15 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo                ; remainder_algorithm          ; work         ;
 ;       |gateXOr2:xor17|                 ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor17 ; gateXOr2                     ; work         ;
-;       |gateXOr2:xor30|                 ; 1.5 (1.5)            ; 1.5 (1.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor30 ; gateXOr2                     ; work         ;
-;       |gateXOr2:xor32|                 ; 1.0 (1.0)            ; 1.5 (1.5)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor32 ; gateXOr2                     ; work         ;
+;       |gateXOr2:xor18|                 ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor18 ; gateXOr2                     ; work         ;
+;       |gateXOr2:xor30|                 ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor30 ; gateXOr2                     ; work         ;
+;       |gateXOr2:xor32|                 ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor32 ; gateXOr2                     ; work         ;
 ;       |gateXOr2:xor33|                 ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor33 ; gateXOr2                     ; work         ;
 ;       |gateXOr2:xor34|                 ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor34 ; gateXOr2                     ; work         ;
 ;       |gateXOr2:xor37|                 ; 0.0 (0.0)            ; 0.5 (0.5)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor37 ; gateXOr2                     ; work         ;
 ;       |gateXOr2:xor38|                 ; 0.5 (0.5)            ; 1.0 (1.0)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor38 ; gateXOr2                     ; work         ;
-;       |gateXOr2:xor39|                 ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor39 ; gateXOr2                     ; work         ;
+;       |gateXOr2:xor39|                 ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor39 ; gateXOr2                     ; work         ;
 ;       |gateXOr2:xor40|                 ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor40 ; gateXOr2                     ; work         ;
 +----------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------------------------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -1072,19 +1073,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; fOutput[22] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; fOutput[23] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; fInput[8]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; fInput[13]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; fInput[13]  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; fInput[0]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; fInput[2]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; fInput[4]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; fInput[6]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; fInput[1]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; fInput[14]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; fInput[0]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; fInput[2]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; fInput[9]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; fInput[14]  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; fInput[9]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; fInput[15]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; fInput[7]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; fInput[3]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; fInput[5]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; fInput[10]  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; fInput[10]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; fInput[11]  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; fInput[12]  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +-------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
@@ -1098,54 +1099,52 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; fInput[8]                                                   ;                   ;         ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor30|y   ; 0                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor40|y~0 ; 0                 ; 0       ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor32|y   ; 0                 ; 0       ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor33|y   ; 0                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor33|y~0 ; 0                 ; 0       ;
 ;      - fOutput[16]~output                                   ; 0                 ; 0       ;
 ; fInput[13]                                                  ;                   ;         ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor30|y   ; 0                 ; 0       ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor17|y   ; 0                 ; 0       ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor32|y~0 ; 0                 ; 0       ;
-;      - fOutput[21]~output                                   ; 0                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor30|y   ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor17|y   ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor32|y   ; 1                 ; 0       ;
+;      - fOutput[21]~output                                   ; 1                 ; 0       ;
+; fInput[0]                                                   ;                   ;         ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor30|y   ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor40|y   ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor39|y~0 ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor37|y   ; 1                 ; 0       ;
+;      - fOutput[8]~output                                    ; 1                 ; 0       ;
+; fInput[2]                                                   ;                   ;         ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor30|y   ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor39|y~0 ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor34|y   ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor38|y   ; 1                 ; 0       ;
+;      - fOutput[10]~output                                   ; 1                 ; 0       ;
 ; fInput[4]                                                   ;                   ;         ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor30|y~0 ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor18|y   ; 1                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor40|y~0 ; 1                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor34|y~0 ; 1                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor38|y~0 ; 1                 ; 0       ;
 ;      - fOutput[12]~output                                   ; 1                 ; 0       ;
 ; fInput[6]                                                   ;                   ;         ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor30|y~0 ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor18|y   ; 1                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor40|y~0 ; 1                 ; 0       ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor32|y   ; 1                 ; 0       ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor33|y   ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor33|y~0 ; 1                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor38|y~0 ; 1                 ; 0       ;
 ;      - fOutput[14]~output                                   ; 1                 ; 0       ;
 ; fInput[1]                                                   ;                   ;         ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor30|y~0 ; 0                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor18|y   ; 0                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor33|y   ; 0                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor38|y~0 ; 0                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor37|y   ; 0                 ; 0       ;
 ;      - fOutput[9]~output                                    ; 0                 ; 0       ;
 ; fInput[14]                                                  ;                   ;         ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor30|y~0 ; 0                 ; 0       ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor33|y   ; 0                 ; 0       ;
-;      - fOutput[22]~output                                   ; 0                 ; 0       ;
-; fInput[0]                                                   ;                   ;         ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor30|y~0 ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor18|y   ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor33|y   ; 1                 ; 0       ;
+;      - fOutput[22]~output                                   ; 1                 ; 0       ;
+; fInput[9]                                                   ;                   ;         ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor40|y   ; 1                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor32|y   ; 1                 ; 0       ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor37|y   ; 1                 ; 0       ;
-;      - fOutput[8]~output                                    ; 1                 ; 0       ;
-; fInput[2]                                                   ;                   ;         ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor30|y~0 ; 1                 ; 0       ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor32|y   ; 1                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor34|y   ; 1                 ; 0       ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor38|y   ; 1                 ; 0       ;
-;      - fOutput[10]~output                                   ; 1                 ; 0       ;
-; fInput[9]                                                   ;                   ;         ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor40|y   ; 0                 ; 0       ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor32|y~0 ; 0                 ; 0       ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor34|y   ; 0                 ; 0       ;
-;      - fOutput[17]~output                                   ; 0                 ; 0       ;
+;      - fOutput[17]~output                                   ; 1                 ; 0       ;
 ; fInput[15]                                                  ;                   ;         ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor40|y   ; 0                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor34|y   ; 0                 ; 0       ;
@@ -1153,7 +1152,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - fOutput[23]~output                                   ; 0                 ; 0       ;
 ; fInput[7]                                                   ;                   ;         ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor17|y   ; 1                 ; 0       ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor32|y~0 ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor32|y   ; 1                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor34|y~0 ; 1                 ; 0       ;
 ;      - fOutput[15]~output                                   ; 1                 ; 0       ;
 ; fInput[3]                                                   ;                   ;         ;
@@ -1163,15 +1162,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - fOutput[11]~output                                   ; 1                 ; 0       ;
 ; fInput[5]                                                   ;                   ;         ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor17|y   ; 1                 ; 0       ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor32|y~0 ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor32|y   ; 1                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor39|y   ; 1                 ; 0       ;
 ;      - fOutput[13]~output                                   ; 1                 ; 0       ;
 ; fInput[10]                                                  ;                   ;         ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor33|y~0 ; 1                 ; 0       ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor39|y   ; 1                 ; 0       ;
-;      - fOutput[18]~output                                   ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor39|y~0 ; 0                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor33|y~0 ; 0                 ; 0       ;
+;      - fOutput[18]~output                                   ; 0                 ; 0       ;
 ; fInput[11]                                                  ;                   ;         ;
-;      - remainder_algorithm:remainderAlgo|gateXOr2:xor33|y~0 ; 1                 ; 0       ;
+;      - remainder_algorithm:remainderAlgo|gateXOr2:xor33|y   ; 1                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor34|y   ; 1                 ; 0       ;
 ;      - remainder_algorithm:remainderAlgo|gateXOr2:xor38|y   ; 1                 ; 0       ;
 ;      - fOutput[19]~output                                   ; 1                 ; 0       ;
@@ -1190,20 +1189,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+------------------------+
 ; Block interconnects          ; 43 / 374,484 ( < 1 % ) ;
 ; C12 interconnects            ; 0 / 16,664 ( 0 % )     ;
-; C2 interconnects             ; 34 / 155,012 ( < 1 % ) ;
-; C4 interconnects             ; 10 / 72,600 ( < 1 % )  ;
+; C2 interconnects             ; 33 / 155,012 ( < 1 % ) ;
+; C4 interconnects             ; 9 / 72,600 ( < 1 % )   ;
 ; DQS bus muxes                ; 0 / 30 ( 0 % )         ;
 ; DQS-18 I/O buses             ; 0 / 30 ( 0 % )         ;
 ; DQS-9 I/O buses              ; 0 / 30 ( 0 % )         ;
-; Direct links                 ; 0 / 374,484 ( 0 % )    ;
+; Direct links                 ; 1 / 374,484 ( < 1 % )  ;
 ; Global clocks                ; 0 / 16 ( 0 % )         ;
 ; Horizontal periphery clocks  ; 0 / 72 ( 0 % )         ;
-; Local interconnects          ; 7 / 112,960 ( < 1 % )  ;
+; Local interconnects          ; 6 / 112,960 ( < 1 % )  ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )         ;
-; R14 interconnects            ; 0 / 15,868 ( 0 % )     ;
-; R14/C12 interconnect drivers ; 0 / 27,256 ( 0 % )     ;
-; R3 interconnects             ; 30 / 169,296 ( < 1 % ) ;
-; R6 interconnects             ; 18 / 330,800 ( < 1 % ) ;
+; R14 interconnects            ; 1 / 15,868 ( < 1 % )   ;
+; R14/C12 interconnect drivers ; 1 / 27,256 ( < 1 % )   ;
+; R3 interconnects             ; 26 / 169,296 ( < 1 % ) ;
+; R6 interconnects             ; 16 / 330,800 ( < 1 % ) ;
 ; Spine clocks                 ; 0 / 480 ( 0 % )        ;
 ; Wire stub REs                ; 0 / 20,834 ( 0 % )     ;
 +------------------------------+------------------------+
@@ -1294,12 +1293,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; fOutput[23]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; fInput[8]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; fInput[13]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; fInput[0]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; fInput[2]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; fInput[4]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; fInput[6]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; fInput[1]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; fInput[14]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; fInput[0]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; fInput[2]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; fInput[9]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; fInput[15]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; fInput[7]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
@@ -1400,10 +1399,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Info (144001): Generated suppressed messages file /home/catarina/Documents/GitHub/aad_proj_1/cyclicRecCheck_24bitParallel/output_files/cyclicRecCheck_24bitParallel.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1862 megabytes
-    Info: Processing ended: Thu Nov  9 11:39:23 2023
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:52
+    Info: Peak virtual memory: 1861 megabytes
+    Info: Processing ended: Thu Nov 16 17:25:30 2023
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:55
 
 
 +----------------------------+
