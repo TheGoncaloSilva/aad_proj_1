@@ -12,7 +12,7 @@ END contMem;
 ARCHITECTURE behavior OF contMem IS
 BEGIN
   PROCESS (add)
-    TYPE CMem IS ARRAY(0 TO 31) OF STD_LOGIC_VECTOR (2 DOWNTO 0);
+        TYPE CMem IS ARRAY(0 TO 31) OF STD_LOGIC_VECTOR (2 DOWNTO 0);
     VARIABLE prog: CMem := (CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   00
                             CONV_STD_LOGIC_VECTOR (16#5#, 3),  -- nRst = 1   nSetO = 0   nEnClk = 1   01
                             CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   02
@@ -32,13 +32,13 @@ BEGIN
                             CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   10
                             CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   11
                             CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   12
-                            CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   13
+                            CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnCLK = 1   13
                             CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   14
                             CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   15
                             CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   16
                             CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   17
-                            CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   18
-                            CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   19
+                            CONV_STD_LOGIC_VECTOR (16#6#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 0   18
+                            CONV_STD_LOGIC_VECTOR (16#3#, 3),  -- nRst = 0   nSetO = 1   nEnClk = 1   19
                             CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   1a
                             CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   1b
                             CONV_STD_LOGIC_VECTOR (16#7#, 3),  -- nRst = 1   nSetO = 1   nEnClk = 1   1c
