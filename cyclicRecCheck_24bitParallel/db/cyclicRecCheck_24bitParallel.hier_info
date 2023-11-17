@@ -83,6 +83,7 @@ input[9] => gateXOr2:xor7.x0
 input[9] => gateXOr2:xor11.x1
 input[10] => gateXOr2:xor12.x0
 input[10] => gateXOr2:xor13.x0
+input[10] => gateXOr2:xor23.x1
 input[11] => gateXOr2:xor6.x1
 input[11] => gateXOr2:xor12.x1
 input[12] => gateXOr2:xor13.x1

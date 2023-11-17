@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cyclicRecCheck_24bitParallel
-Thu Nov  9 11:38:55 2023
+Thu Nov 16 17:24:58 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov  9 11:38:55 2023       ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 16 17:24:58 2023       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; cyclicRecCheck_24bitParallel                ;
 ; Top-level Entity Name           ; cyclicRecCheck_24bitParallel                ;
@@ -185,10 +185,10 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                 ;
 ; Combinational ALUT usage for logic          ; 15              ;
 ;     -- 7 input functions                    ; 0               ;
-;     -- 6 input functions                    ; 1               ;
+;     -- 6 input functions                    ; 0               ;
 ;     -- 5 input functions                    ; 5               ;
-;     -- 4 input functions                    ; 5               ;
-;     -- <=3 input functions                  ; 4               ;
+;     -- 4 input functions                    ; 7               ;
+;     -- <=3 input functions                  ; 3               ;
 ;                                             ;                 ;
 ; Dedicated logic registers                   ; 0               ;
 ;                                             ;                 ;
@@ -196,10 +196,10 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                 ;
 ; Total DSP Blocks                            ; 0               ;
 ;                                             ;                 ;
-; Maximum fan-out node                        ; fInput[6]~input ;
-; Maximum fan-out                             ; 6               ;
-; Total fan-out                               ; 127             ;
-; Average fan-out                             ; 1.34            ;
+; Maximum fan-out node                        ; fInput[0]~input ;
+; Maximum fan-out                             ; 5               ;
+; Total fan-out                               ; 126             ;
+; Average fan-out                             ; 1.33            ;
 +---------------------------------------------+-----------------+
 
 
@@ -211,13 +211,14 @@ https://fpgasoftware.intel.com/eula.
 ; |cyclicRecCheck_24bitParallel          ; 15 (0)              ; 0 (0)                     ; 0                 ; 0          ; 40   ; 0            ; |cyclicRecCheck_24bitParallel                                                  ; cyclicRecCheck_24bitParallel ; work         ;
 ;    |remainder_algorithm:remainderAlgo| ; 15 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo                ; remainder_algorithm          ; work         ;
 ;       |gateXOr2:xor17|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor17 ; gateXOr2                     ; work         ;
-;       |gateXOr2:xor30|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor30 ; gateXOr2                     ; work         ;
-;       |gateXOr2:xor32|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor32 ; gateXOr2                     ; work         ;
+;       |gateXOr2:xor18|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor18 ; gateXOr2                     ; work         ;
+;       |gateXOr2:xor30|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor30 ; gateXOr2                     ; work         ;
+;       |gateXOr2:xor32|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor32 ; gateXOr2                     ; work         ;
 ;       |gateXOr2:xor33|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor33 ; gateXOr2                     ; work         ;
 ;       |gateXOr2:xor34|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor34 ; gateXOr2                     ; work         ;
 ;       |gateXOr2:xor37|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor37 ; gateXOr2                     ; work         ;
 ;       |gateXOr2:xor38|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor38 ; gateXOr2                     ; work         ;
-;       |gateXOr2:xor39|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor39 ; gateXOr2                     ; work         ;
+;       |gateXOr2:xor39|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor39 ; gateXOr2                     ; work         ;
 ;       |gateXOr2:xor40|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cyclicRecCheck_24bitParallel|remainder_algorithm:remainderAlgo|gateXOr2:xor40 ; gateXOr2                     ; work         ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -245,14 +246,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; arriav_lcell_comb     ; 15                          ;
 ;     normal            ; 15                          ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 5                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 7                           ;
 ;         5 data inputs ; 5                           ;
-;         6 data inputs ; 1                           ;
 ; boundary_port         ; 40                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 2.00                        ;
+; Average LUT depth     ; 1.94                        ;
 +-----------------------+-----------------------------+
 
 
@@ -271,7 +271,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov  9 11:38:47 2023
+    Info: Processing started: Thu Nov 16 17:24:51 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cyclicRecCheck_24bitParallel -c cyclicRecCheck_24bitParallel
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -298,9 +298,9 @@ Info (21057): Implemented 55 device resources after synthesis - the final resour
     Info (21059): Implemented 24 output pins
     Info (21061): Implemented 15 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 484 megabytes
-    Info: Processing ended: Thu Nov  9 11:38:55 2023
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 483 megabytes
+    Info: Processing ended: Thu Nov 16 17:24:58 2023
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:18
 
 
