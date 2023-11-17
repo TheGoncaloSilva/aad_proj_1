@@ -40,59 +40,114 @@ $$
 * $\text{Encoded Message} = 100100001$
 * $Q(x) = 111101$ ($\text{Message}_{\text{bits}}-1 = 5 \text{bits}$)
 
-## Remainder Properties
 
-Observing the design principles, we chose to implement the  remainder properties, since this one allowed to have lower propagation delays and xor's, the following equations were identified to reach the remainder:
+# Remainder Properties Optimization
+## Introduction
 
-Level 0:
+In the pursuit of optimizing error-detection codes, the use of remainder properties proves to be an effective strategy. This approach aims to reduce both the number of XOR operations and propagation delays, enhancing the overall efficiency of the parallel encoder. The following markdown chapter outlines the process of analyzing the original equations, implementing a script for optimization, and presenting the final optimized solution.
 
-* $r_7=(a_0 \oplus a_1) \oplus a_3 \oplus a_5 \oplus a_7 \oplus a_{12} \oplus a_{13}$
-* $r_6=(a_1 \oplus a_2) \oplus a_3 \oplus a_4 \oplus a_5 \oplus a_6 \oplus a_7 \oplus a_{11} \oplus a_{13} \oplus a_{15}$
-* $r_5=(a_0 \oplus a_1) \oplus a_2 \oplus a_3 \oplus a_4 \oplus a_5 \oplus a_6 \oplus a_{10} \oplus a_{12} \oplus a_{14}$
-* $r_4=(a_2 \oplus a_4) \oplus a_7 \oplus a_9 \oplus a_{11} \oplus a_{12} \oplus a_{15}$
-* $r_3=(a_1 \oplus a_3) \oplus a_6 \oplus a_8 \oplus a_{10} \oplus a_{11} \oplus a_{14}$
-* $r_2=(a_0 \oplus a_2) \oplus a_5 \oplus a_7 \oplus a_9 \oplus a_{10} \oplus a_{13}$
-* $r_1=(a_0 \oplus a_3) \oplus a_4 \oplus a_5 \oplus a_6 \oplus a_7 \oplus a_8 \oplus a_9 \oplus a_{13} \oplus a_{15}$
-* $r_0=(a_0 \oplus a_1) \oplus a_2 \oplus a_4 \oplus a_6 \oplus a_8 \oplus a_{13} \oplus a_{14}$
+## Original Equations
 
-Simplification:
+The original set of equations for the parallel encoder is represented by eight polynomials, denoted as $r_{i}$ for $i$ ranging from 0 to 7. These polynomials involve XOR $\oplus$ operations among bits $a_{0}$ through $a_{15}$.
 
-* $r_7=(\text{xor1} \oplus a_3) \oplus a_5 \oplus a_7 \oplus a_{12} \oplus a_{13}$
-  * **xor1** = $a_0 \oplus a_1$
-* $r_6=(\text{xor2} \oplus a_3) \oplus a_4 \oplus a_5 \oplus a_6 \oplus a_7 \oplus a_{11} \oplus a_{13} \oplus a_{15}$
-  * **xor2** = $a_1 \oplus a_2$
-* $r_5=(\text{xor1} \oplus a_2) \oplus a_3 \oplus a_4 \oplus a_5 \oplus a_6 \oplus a_{10} \oplus a_{12} \oplus a_{14}$
-* $r_4=(\text{xor3} \oplus a_7) \oplus a_9 \oplus a_{11} \oplus a_{12} \oplus a_{15}$
-  * **xor3** = $a_2 \oplus a_4$
-* $r_3=(\text{xor4} \oplus a_6) \oplus a_8 \oplus a_{10} \oplus a_{11} \oplus a_{14}$
-  * **xor4** = $a_1 \oplus a_3$
-* $r_2=(\text{xor5} \oplus a_5) \oplus a_7 \oplus a_9 \oplus a_{10} \oplus a_{13}$
-  * **xor5** = $a_0 \oplus a_2$
-* $r_1=(\text{xor6} \oplus a_4) \oplus a_5 \oplus a_6 \oplus a_7 \oplus a_8 \oplus a_9 \oplus a_{13} \oplus a_{15}$
-  * **xor6** = $a_0 \oplus a_3$
-* $r_0=(\text{xor1} \oplus a_2) \oplus a_4 \oplus a_6 \oplus a_8 \oplus a_{13} \oplus a_{14}$
+* $r_7= a_0 \oplus a_1 \oplus a_3 \oplus a_5 \oplus a_7 \oplus a_{12} \oplus a_{13}$
+* $r_6= a_1 \oplus a_2 \oplus a_3 \oplus a_4 \oplus a_5 \oplus a_6 \oplus a_7 \oplus a_{11} \oplus a_{13} \oplus a_{15}$
+* $r_5= a_0 \oplus a_1 \oplus a_2 \oplus a_3 \oplus a_4 \oplus a_5 \oplus a_6 \oplus a_{10} \oplus a_{12} \oplus a_{14}$
+* $r_4= a_2 \oplus a_4 \oplus a_7 \oplus a_9 \oplus a_{11} \oplus a_{12} \oplus a_{15}$
+* $r_3= a_1 \oplus a_3 \oplus a_6 \oplus a_8 \oplus a_{10} \oplus a_{11} \oplus a_{14}$
+* $r_2= a_0 \oplus a_2  \oplus a_5 \oplus a_7 \oplus a_9 \oplus a_{10} \oplus a_{13}$
+* $r_1= a_0 \oplus a_3 \oplus a_4 \oplus a_5 \oplus a_6 \oplus a_7 \oplus a_8 \oplus a_9 \oplus a_{13} \oplus a_{15}$
+* $r_0= a_0 \oplus a_1 \oplus a_2 \oplus a_4 \oplus a_6 \oplus a_8 \oplus a_{13} \oplus a_{14}$
 
-...
-Result:
 
-* $r_7=\text{xor37}$ (finishes in 3 levels)
-* $r_6=\text{xor38}$ (finishes in 4 levels)
-* $r_5=\text{xor39}$ (finishes in 4 levels)
-* $r_4=\text{xor34}$ (finishes in 3 levels)
-* $r_3=\text{xor33}$ (finishes in 3 levels)
-* $r_2=\text{xor32}$ (finishes in 3 levels)
-* $r_1=\text{xor40}$ (finishes in 4 levels)
-* $r_1=\text{xor31}$ (finishes in 3 levels)
+## Optimization Script
 
-The **levels** here mentioned represent every time there is *feedback* in our system. Take the following example:
+To optimize the equations, a Python script named `crc_optimizer.py` was implemented. The script utilizes a ranking system that identifies XOR combinations occurring frequently and suggests their inclusion in the optimized equations. The user is prompted to provide new values for each bit layer, allowing for iterative optimization.
+
+The script generates all possible pairs for each bit layer and finds the combinations that yield the maximum reduction in XOR operations. The final optimized solution is presented in a ranking format, guiding the user towards the most significant XOR combinations.
+
+# Optimized XOR Combinations
+
+After an in-depth analysis and iterative optimization process using the `crc_optimizer.py` script, the parallel encoder's XOR combinations were successfully streamlined. The initial set of equations, involving 58 XOR operations, was refined to a more efficient configuration, reducing the number of XORs to 40. The optimized XOR combinations are organized into levels, reflecting the feedback stages within the system. The optimization successfully identifies and prioritizes the most frequent XOR patterns, significantly improving computational efficiency.
+
+
+## Level 1
+
+- XOR1: $a_{13} \oplus a_7$
+- XOR2: $a_6 \oplus a_4$
+- XOR3: $a_5 \oplus a_3$
+- XOR4: $a_{14} \oplus a_1$
+- XOR5: $a_0 \oplus a_2$
+- XOR6: $a_2 \oplus a_{11}$
+- XOR7: $a_9 \oplus a_{15}$
+- XOR8: $a_0 \oplus a_1$
+- XOR9: $a_0 \oplus a_8$
+- XOR10: $a_8 \oplus a_{13}$
+- XOR11: $a_5 \oplus a_9$
+- XOR12: $a_{10} \oplus a_{11}$
+- XOR13: $a_{10} \oplus a_{12}$
+- XOR14: $a_6 \oplus a_8$
+- XOR15: $a_4 \oplus a_7$
+- XOR16: $a_{15} \oplus a_1$
+
+## Level 2
+
+- XOR17: $XOR1 \oplus XOR3$
+- XOR18: $XOR2 \oplus XOR4$
+- XOR19: $a_3 \oplus XOR14$
+- XOR20: $XOR1 \oplus XOR5$
+- XOR21: $XOR2 \oplus XOR7$
+- XOR22: $XOR5 \oplus XOR10$
+- XOR23: $XOR11 \oplus a_{10}$
+- XOR24: $XOR4 \oplus XOR12$
+- XOR25: $XOR6 \oplus XOR7$
+- XOR26: $XOR3 \oplus XOR5$
+- XOR27: $XOR15 \oplus a_{12}$
+- XOR28: $XOR6 \oplus XOR2$
+- XOR29: $XOR8 \oplus a_{12}$
+
+## Level 3
+
+- **XOR30:** $XOR18 \oplus XOR22$ - **R0 SOLUTION**
+- XOR31: $XOR21 \oplus XOR9$
+- **XOR32:** $XOR20 \oplus XOR23$ - **R2 SOLUTION**
+- **XOR33:** $XOR19 \oplus XOR24$ - **R3 SOLUTION**
+- **XOR34:** $XOR25 \oplus XOR27$ - **R4 SOLUTION**
+- XOR35: $XOR26 \oplus XOR13$
+- XOR36: $XOR28 \oplus XOR16$
+- **XOR37:** $XOR17 \oplus XOR29$ - **R7 SOLUTION**
+
+## Level 4
+
+- **XOR38:** $XOR17 \oplus XOR36$ - **R6 SOLUTION**
+- **XOR39:** $XOR18 \oplus XOR35$ - **R5 SOLUTION**
+- **XOR40:** $XOR17 \oplus XOR31$ - **R1 SOLUTION**
+
+These optimized XOR combinations contribute to a more efficient parallel encoder, reducing the computational load and propagation delays. The identification and prioritization of frequently occurring XOR patterns showcase the effectiveness of the optimization process, resulting in an enhanced error-detection code.
+
+## Conclusion
+### Summary:
+
+- **$r_7$:** $\text{XOR37}$ (finishes in 3 levels)
+- **$r_6$:** $\text{XOR38}$ (finishes in 4 levels)
+- **$r_5$:** $\text{XOR39}$ (finishes in 4 levels)
+- **$r_4$:** $\text{XOR34}$ (finishes in 3 levels)
+- **$r_3$:** $\text{XOR33}$ (finishes in 3 levels)
+- **$r_2$:** $\text{XOR32}$ (finishes in 3 levels)
+- **$r_1$:** $\text{XOR40}$ (finishes in 4 levels)
+- **$r_1$:** $\text{XOR30}$ (finishes in 3 levels)
+
+The **levels** mentioned represent each instance of *feedback* in the system. Consider the following example:
 
 $$
 (a_0 \oplus a_1) \oplus a_3
 $$
 
-In this example, there needs to be two levels of processing. One where $(a_0 \oplus a_1)$ is done and another where this result is **xor'ed** with $a_3$. The system can execute various xor's at each level. But the aim of optimizing is to reach the smaller amount of xor's needed, by taking advantage of multiple xor's needed. In our case, the theoretical value of xor's needed without optimizing would be 58 and 9 propagation delays and we managed to reduce the amount of xor's to 40 and **3-4 propagation delays**.
+In this example, two levels of processing are needed. One where $(a_0 \oplus a_1)$ is executed and another where this result is **XOR'ed** with $a_3$. The system can perform various XOR operations at each level. The goal of optimization is to minimize the number of XOR operations needed by taking advantage of multiple XORs in each level. In our case, the theoretical number of XORs needed without optimization would be 58, with 9 propagation delays. However, through optimization, we managed to reduce the number of XORs to 40 and achieve **3-4 propagation delays**.
 
-The exact simplifications conducted can be seen in this **spreadsheets (include hyperlink here)**. This component was implemented using a **Parallel** implementation.
+The detailed simplifications conducted can be viewed in this [spreadsheet](https://docs.google.com/spreadsheets/d/1CsTB0bZz6s2GWEfCbEtgzzU8rn8X1ISSbtLjJZouMgA/edit?usp=sharing). This component was implemented using a **Parallel** implementation.
+
+
 
 # Checker
 
