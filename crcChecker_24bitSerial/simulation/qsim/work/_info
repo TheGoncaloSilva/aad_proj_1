@@ -8,35 +8,38 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simulation/qsim
-Ecrcchecker_24bitserial
-Z1 w1700090414
-Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 3HQPc5MVbmOPN?>a5EBYj2
-Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z5 DPx8 cyclonev 19 cyclonev_components 0 22 jZ]H46BQLgIP5mfRTO`3B1
-Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ^Ch;U@;bMk1;>A2B<UV`k2
-!i122 38
-Z9 d/home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simulation/qsim
-Z10 8crcChecker_24bitSerial.vho
-Z11 FcrcChecker_24bitSerial.vho
+d/home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simulation/qsim
+Ebincounter_5bit
+Z0 w1700251596
+Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 3HQPc5MVbmOPN?>a5EBYj2
+Z2 DPx8 cyclonev 19 cyclonev_components 0 22 jZ]H46BQLgIP5mfRTO`3B1
+Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ^Ch;U@;bMk1;>A2B<UV`k2
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 dc5N=DKXMMTVYdUQ@D3FA2
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z9 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
+!i122 52
+Z10 d/home/goncalo/repos/aad_proj_1/crcChecker_24bitSerial/simulation/qsim
+Z11 8crcChecker_24bitSerial.vho
+Z12 FcrcChecker_24bitSerial.vho
 l0
-L37 1
-V6MDZ?h:6L[1[C7RUSCS3J1
-!s100 z>SAVGA1Ym:Ek7;Gm:Eg]1
-Z12 OV;C;2020.1;71
+Z13 L39 1
+VM1>2?D>KlfM]WYGQU?cTH0
+!s100 C2KfmA=0JAQJ3a<T<KXD?3
+Z14 OV;C;2020.1;71
 32
-Z13 !s110 1700090415
+Z15 !s110 1700251597
 !i10b 1
-Z14 !s108 1700090415.000000
-Z15 !s90 -work|work|crcChecker_24bitSerial.vho|
-Z16 !s107 crcChecker_24bitSerial.vho|
+Z16 !s108 1700251597.000000
+Z17 !s90 -work|work|crcChecker_24bitSerial.vho|
+Z18 !s107 crcChecker_24bitSerial.vho|
 !i113 1
-Z17 o-work work
-Z18 tExplicit 1 CvgOpt 0
+Z19 o-work work
+Z20 tExplicit 1 CvgOpt 0
 Astructure
+R1
 R2
 R3
 R4
@@ -44,150 +47,147 @@ R5
 R6
 R7
 R8
-DEx4 work 22 crcchecker_24bitserial 0 22 6MDZ?h:6L[1[C7RUSCS3J1
-!i122 38
-l72
-L53 87
-VzT;1[l_oe2X7bo@D>G]U]3
-!s100 ]o<M3N??UmQ7<NRAf:QiU0
-R12
-32
-R13
-!i10b 1
-R14
-R15
-R16
-!i113 1
-R17
-R18
-Ecrcchecker_24bitserial_vhd_vec_tst
-Z19 w1700090413
-R6
-R7
-!i122 39
 R9
-Z20 8goncalo_simu.vwf.vht
-Z21 Fgoncalo_simu.vwf.vht
-l0
-Z22 L32 1
-V@]_Km^0:>4Xl8NnP?FZ8W1
-!s100 E=gJ`hOKj[4=Ka6?FFACc2
-R12
-32
-R13
-!i10b 1
+DEx4 work 15 bincounter_5bit 0 22 M1>2?D>KlfM]WYGQU?cTH0
+!i122 52
+l98
+L57 393
+VDb:R<[fa@`J^YOVZ_2>oo1
+!s100 D4`:Cg6;0iLUWFEdhNEE60
 R14
-Z23 !s90 -work|work|goncalo_simu.vwf.vht|
-Z24 !s107 goncalo_simu.vwf.vht|
-!i113 1
+32
+R15
+!i10b 1
+R16
 R17
 R18
-Acrcchecker_24bitserial_arch
-R6
+!i113 1
+R19
+R20
+Ebincounter_5bit_vhd_vec_tst
+Z21 w1700251595
 R7
-Z25 DEx4 work 34 crcchecker_24bitserial_vhd_vec_tst 0 22 @]_Km^0:>4Xl8NnP?FZ8W1
-!i122 39
-l49
-L34 70
-VXGd46kIj;4_hAjUn`6W?j1
-!s100 BAm4=ihT5PZ;@`AiVAUic3
-R12
-32
-R13
-!i10b 1
-R14
-R23
-R24
-!i113 1
-R17
-R18
-Elinarfeedback_shiftregister
-Z26 w1699877984
-R3
-R5
 R8
-R2
-Z27 DPx6 altera 11 dffeas_pack 0 22 dc5N=DKXMMTVYdUQ@D3FA2
-R4
-R6
+!i122 53
+R10
+Z22 8binCounter_simulation.vwf.vht
+Z23 FbinCounter_simulation.vwf.vht
+l0
+Z24 L32 1
+V?QYnN64X:L^bD242X7iG60
+!s100 X8olL:T9DQ[iTQ^Gf90;T2
+R14
+32
+R15
+!i10b 1
+R16
+Z25 !s90 -work|work|binCounter_simulation.vwf.vht|
+Z26 !s107 binCounter_simulation.vwf.vht|
+!i113 1
+R19
+R20
+Abincounter_5bit_arch
 R7
-Z28 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
-!i122 28
-R0
+R8
+DEx4 work 27 bincounter_5bit_vhd_vec_tst 0 22 ?QYnN64X:L^bD242X7iG60
+!i122 53
+l47
+L34 47
+VSFke8I>gT>;8Dg:RJ7_fz3
+!s100 fUQQBL7_fP?QK??TRB;<92
+R14
+32
+R15
+!i10b 1
+R16
+R25
+R26
+!i113 1
+R19
+R20
+Ecomparator
+Z27 w1700255318
+R4
+R1
+R6
+R2
+R7
+R8
+R3
+!i122 56
 R10
 R11
-l0
-L39 1
-VZJ:4aM^4VHm]8AXbBkihE3
-!s100 Z]COB_3>Ub1ZSTJGM[h0X2
 R12
+l0
+Z28 L37 1
+VmWcejal^2GcFi^EN=JhE?0
+!s100 KLN`A=f^Q3ZZ^CFi6:>lJ2
+R14
 32
-Z29 !s110 1699877984
+Z29 !s110 1700255319
 !i10b 1
-Z30 !s108 1699877984.000000
-R15
-R16
-!i113 1
+Z30 !s108 1700255319.000000
 R17
 R18
+!i113 1
+R19
+R20
 Astructure
-R3
-R5
-R8
-R2
-R27
 R4
+R1
 R6
+R2
 R7
-R28
-DEx4 work 27 linarfeedback_shiftregister 0 22 ZJ:4aM^4VHm]8AXbBkihE3
-!i122 28
-l103
-L62 543
-VAI8DBWcb[_hUk`XzB42NX2
-!s100 ^al9Q9;l56mGnNhS<>>9n3
-R12
+R8
+R3
+DEx4 work 10 comparator 0 22 mWcejal^2GcFi^EN=JhE?0
+!i122 56
+l89
+L56 201
+VBz1GnQT1@UYAn242Y7m3n1
+!s100 ^Ij[RQa7Bcj:[S2fHJ[dc0
+R14
 32
 R29
 !i10b 1
 R30
-R15
-R16
-!i113 1
 R17
 R18
-Elinarfeedback_shiftregister_vhd_vec_tst
-Z31 w1699877982
-R6
+!i113 1
+R19
+R20
+Ecomparator_vhd_vec_tst
+Z31 w1700255317
 R7
-!i122 29
-R0
-Z32 8Waveform4.vwf.vht
-Z33 FWaveform4.vwf.vht
+R8
+!i122 57
+R10
+Z32 8comparator_simulation.vwf.vht
+Z33 Fcomparator_simulation.vwf.vht
 l0
-R22
-VNK;nCUg2:PmO`MnQn:F;]1
-!s100 UzG<G9ZeWb:KP]P[hA9611
-R12
+R24
+VmIH0Gk3f19hA::C4@faEX1
+!s100 kjR5lWCeS=Z[>di=fkl3:1
+R14
 32
 R29
 !i10b 1
 R30
-Z34 !s90 -work|work|Waveform4.vwf.vht|
-Z35 !s107 Waveform4.vwf.vht|
+Z34 !s90 -work|work|comparator_simulation.vwf.vht|
+Z35 !s107 comparator_simulation.vwf.vht|
 !i113 1
-R17
-R18
-Alinarfeedback_shiftregister_arch
-R6
+R19
+R20
+Acomparator_arch
 R7
-DEx4 work 39 linarfeedback_shiftregister_vhd_vec_tst 0 22 NK;nCUg2:PmO`MnQn:F;]1
-!i122 29
-l49
-L34 59
-VQKD1]dPe0X2HckU3Yg;lY1
-!s100 IOE[OYoY?Je=9JFVVdBha2
-R12
+R8
+DEx4 work 22 comparator_vhd_vec_tst 0 22 mIH0Gk3f19hA::C4@faEX1
+!i122 57
+l45
+L34 181
+VQAJddY4Lk>UIjaE<eBcmf3
+!s100 R4>FI3jGh5R8zS2fUiA_U0
+R14
 32
 R29
 !i10b 1
@@ -195,5 +195,289 @@ R30
 R34
 R35
 !i113 1
+R19
+R20
+Econtrol
+Z36 w1700231372
+R4
+R1
+R6
+R2
+R7
+R8
+R3
+!i122 42
+R10
+R11
+R12
+l0
+R28
+V:iSF3[Vc2We4<XE9264dS2
+!s100 jl:5>7LYM6z8i>C5cE=eE2
+R14
+32
+Z37 !s110 1700231373
+!i10b 1
+Z38 !s108 1700231373.000000
 R17
 R18
+!i113 1
+R19
+R20
+Astructure
+R4
+R1
+R6
+R2
+R7
+R8
+R3
+DEx4 work 7 control 0 22 :iSF3[Vc2We4<XE9264dS2
+!i122 42
+l103
+L61 289
+VACaKSKO7>UOENX3S;[O5?0
+!s100 ^;hVO7SP5Y1b0jaRiTP7I2
+R14
+32
+R37
+!i10b 1
+R38
+R17
+R18
+!i113 1
+R19
+R20
+Econtrol_vhd_vec_tst
+Z39 w1700231371
+R7
+R8
+!i122 43
+R10
+Z40 8control_simulation.vwf.vht
+Z41 Fcontrol_simulation.vwf.vht
+l0
+R24
+V`M1m^2JeQe>`L:SFRN0f00
+!s100 50`?98PBUS471a>N7=LF62
+R14
+32
+R37
+!i10b 1
+R38
+Z42 !s90 -work|work|control_simulation.vwf.vht|
+Z43 !s107 control_simulation.vwf.vht|
+!i113 1
+R19
+R20
+Acontrol_arch
+R7
+R8
+DEx4 work 19 control_vhd_vec_tst 0 22 `M1m^2JeQe>`L:SFRN0f00
+!i122 43
+l53
+L34 113
+V><Smn=8W1i6ocS8MY<3ML3
+!s100 WU4G;]HA@dke[WY8R89TI1
+R14
+32
+R37
+!i10b 1
+R38
+R42
+R43
+!i113 1
+R19
+R20
+Ecrcchecker_24bitserial
+Z44 w1700265153
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+!i122 84
+R10
+R11
+R12
+l0
+R13
+V7Y13j?R0o`Lm2bl6@:`?Z3
+!s100 ?Ue>X@TG8fjZid_Of@B4<1
+R14
+32
+Z45 !s110 1700265153
+!i10b 1
+Z46 !s108 1700265153.000000
+R17
+R18
+!i113 1
+R19
+R20
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 22 crcchecker_24bitserial 0 22 7Y13j?R0o`Lm2bl6@:`?Z3
+!i122 84
+l128
+L55 691
+VhD=RjA17dK8kC?XLGQ`fk1
+!s100 :ilnViMZ7^5QmOo7EAh`n1
+R14
+32
+R45
+!i10b 1
+R46
+R17
+R18
+!i113 1
+R19
+R20
+Ecrcchecker_24bitserial_vhd_vec_tst
+Z47 w1700265151
+R7
+R8
+!i122 85
+R10
+Z48 8lfsr_simulation.vwf.vht
+Z49 Flfsr_simulation.vwf.vht
+l0
+R24
+V@]_Km^0:>4Xl8NnP?FZ8W1
+!s100 E=gJ`hOKj[4=Ka6?FFACc2
+R14
+32
+R45
+!i10b 1
+R46
+Z50 !s90 -work|work|lfsr_simulation.vwf.vht|
+Z51 !s107 lfsr_simulation.vwf.vht|
+!i113 1
+R19
+R20
+Acrcchecker_24bitserial_arch
+R7
+R8
+DEx4 work 34 crcchecker_24bitserial_vhd_vec_tst 0 22 @]_Km^0:>4Xl8NnP?FZ8W1
+!i122 85
+l49
+Z52 L34 94
+V[=;f4YFh?QC1;48o:^JH[0
+!s100 BJXM^9=oXS?<cGW3lI8_Y3
+R14
+32
+R45
+!i10b 1
+R46
+R50
+R51
+!i113 1
+R19
+R20
+Elinarfeedback_shiftregister
+Z53 w1700265435
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+!i122 86
+R10
+R11
+R12
+l0
+R13
+VG57F=<Go1DJXM6L4enSLT0
+!s100 nMTO9Ra1gno0f?2;Mmc2[0
+R14
+32
+Z54 !s110 1700265436
+!i10b 1
+Z55 !s108 1700265436.000000
+R17
+R18
+!i113 1
+R19
+R20
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 27 linarfeedback_shiftregister 0 22 G57F=<Go1DJXM6L4enSLT0
+!i122 86
+l108
+L62 494
+VVRXgM3hiHBh5=2_CzeSA10
+!s100 NBoXg2XG5@HnM5hPTDiWn2
+R14
+32
+R54
+!i10b 1
+R55
+R17
+R18
+!i113 1
+R19
+R20
+Elinarfeedback_shiftregister_vhd_vec_tst
+Z56 w1700265434
+R7
+R8
+!i122 87
+R10
+R48
+R49
+l0
+R24
+VNK;nCUg2:PmO`MnQn:F;]1
+!s100 UzG<G9ZeWb:KP]P[hA9611
+R14
+32
+R54
+!i10b 1
+R55
+R50
+R51
+!i113 1
+R19
+R20
+Alinarfeedback_shiftregister_arch
+R7
+R8
+Z57 DEx4 work 39 linarfeedback_shiftregister_vhd_vec_tst 0 22 NK;nCUg2:PmO`MnQn:F;]1
+!i122 87
+l49
+R52
+Z58 VeWQ9]hif=eC?a=;jANzzf1
+Z59 !s100 EPjjhZR2NB_5P1:Vf]D972
+R14
+32
+R54
+!i10b 1
+R55
+R50
+R51
+!i113 1
+R19
+R20

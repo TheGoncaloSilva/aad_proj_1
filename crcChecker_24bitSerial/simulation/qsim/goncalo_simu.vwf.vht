@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/15/2023 23:20:13"
+-- Generated on "11/17/2023 22:38:26"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          crcChecker_24bitSerial
 -- 
@@ -68,18 +68,50 @@ LOOP
 END LOOP;
 END PROCESS t_prcs_clk;
 
+-- nGRst
+t_prcs_nGRst: PROCESS
+BEGIN
+	nGRst <= '0';
+	WAIT FOR 20000 ps;
+	nGRst <= '1';
+WAIT;
+END PROCESS t_prcs_nGRst;
+
 -- dIn
 t_prcs_dIn: PROCESS
 BEGIN
+	dIn <= '0';
+	WAIT FOR 20000 ps;
 	dIn <= '1';
 	WAIT FOR 20000 ps;
-	FOR i IN 1 TO 7
-	LOOP
-		dIn <= '0';
-		WAIT FOR 20000 ps;
-		dIn <= '1';
-		WAIT FOR 20000 ps;
-	END LOOP;
+	dIn <= '0';
+	WAIT FOR 20000 ps;
+	dIn <= '1';
+	WAIT FOR 20000 ps;
+	dIn <= '0';
+	WAIT FOR 20000 ps;
+	dIn <= '1';
+	WAIT FOR 20000 ps;
+	dIn <= '0';
+	WAIT FOR 20000 ps;
+	dIn <= '1';
+	WAIT FOR 20000 ps;
+	dIn <= '0';
+	WAIT FOR 20000 ps;
+	dIn <= '1';
+	WAIT FOR 20000 ps;
+	dIn <= '0';
+	WAIT FOR 20000 ps;
+	dIn <= '1';
+	WAIT FOR 20000 ps;
+	dIn <= '0';
+	WAIT FOR 20000 ps;
+	dIn <= '1';
+	WAIT FOR 20000 ps;
+	dIn <= '0';
+	WAIT FOR 20000 ps;
+	dIn <= '1';
+	WAIT FOR 20000 ps;
 	dIn <= '0';
 	WAIT FOR 20000 ps;
 	dIn <= '1';
@@ -89,15 +121,10 @@ BEGIN
 	dIn <= '1';
 	WAIT FOR 20000 ps;
 	dIn <= '0';
+	WAIT FOR 80000 ps;
+	dIn <= '1';
+	WAIT FOR 20000 ps;
+	dIn <= '0';
 WAIT;
 END PROCESS t_prcs_dIn;
-
--- nGRst
-t_prcs_nGRst: PROCESS
-BEGIN
-	nGRst <= '0';
-	WAIT FOR 20000 ps;
-	nGRst <= '1';
-WAIT;
-END PROCESS t_prcs_nGRst;
 END crcChecker_24bitSerial_arch;

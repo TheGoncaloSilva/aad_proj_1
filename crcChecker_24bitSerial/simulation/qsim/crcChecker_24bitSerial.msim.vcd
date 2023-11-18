@@ -3,7 +3,7 @@ $comment
 		vcd file crcChecker_24bitSerial.msim.vcd -direction
 $end
 $date
-	Wed Nov 15 23:20:15 2023
+	Fri Nov 17 23:57:16 2023
 $end
 $version
 	ModelSim Version 2020.1
@@ -12,511 +12,354 @@ $timescale
 	1ps
 $end
 
-$scope module crcchecker_24bitserial_vhd_vec_tst $end
+$scope module linarfeedback_shiftregister_vhd_vec_tst $end
 $var wire 1 ! clk $end
 $var wire 1 " dIn $end
-$var wire 1 # err $end
-$var wire 1 $ nGRst $end
+$var wire 1 # dOut [7] $end
+$var wire 1 $ dOut [6] $end
+$var wire 1 % dOut [5] $end
+$var wire 1 & dOut [4] $end
+$var wire 1 ' dOut [3] $end
+$var wire 1 ( dOut [2] $end
+$var wire 1 ) dOut [1] $end
+$var wire 1 * dOut [0] $end
+$var wire 1 + nGRst $end
 
 $scope module i1 $end
-$var wire 1 % gnd $end
-$var wire 1 & vcc $end
-$var wire 1 ' unknown $end
-$var wire 1 ( devoe $end
-$var wire 1 ) devclrn $end
-$var wire 1 * devpor $end
-$var wire 1 + ww_devoe $end
-$var wire 1 , ww_devclrn $end
-$var wire 1 - ww_devpor $end
-$var wire 1 . ww_nGRst $end
-$var wire 1 / ww_clk $end
-$var wire 1 0 ww_dIn $end
-$var wire 1 1 ww_err $end
-$var wire 1 2 \clk~input_o\ $end
-$var wire 1 3 \nGRst~input_o\ $end
-$var wire 1 4 \dIn~input_o\ $end
-$var wire 1 5 \~QUARTUS_CREATED_GND~I_combout\ $end
+$var wire 1 , gnd $end
+$var wire 1 - vcc $end
+$var wire 1 . unknown $end
+$var wire 1 / devoe $end
+$var wire 1 0 devclrn $end
+$var wire 1 1 devpor $end
+$var wire 1 2 ww_devoe $end
+$var wire 1 3 ww_devclrn $end
+$var wire 1 4 ww_devpor $end
+$var wire 1 5 ww_clk $end
+$var wire 1 6 ww_nGRst $end
+$var wire 1 7 ww_dIn $end
+$var wire 1 8 ww_dOut [7] $end
+$var wire 1 9 ww_dOut [6] $end
+$var wire 1 : ww_dOut [5] $end
+$var wire 1 ; ww_dOut [4] $end
+$var wire 1 < ww_dOut [3] $end
+$var wire 1 = ww_dOut [2] $end
+$var wire 1 > ww_dOut [1] $end
+$var wire 1 ? ww_dOut [0] $end
+$var wire 1 @ \~QUARTUS_CREATED_GND~I_combout\ $end
+$var wire 1 A \clk~input_o\ $end
+$var wire 1 B \clk~inputCLKENA0_outclk\ $end
+$var wire 1 C \dIn~input_o\ $end
+$var wire 1 D \xor1|y~combout\ $end
+$var wire 1 E \nGRst~input_o\ $end
+$var wire 1 F \ff2|Q~q\ $end
+$var wire 1 G \ff8|Q~q\ $end
+$var wire 1 H \xor2|y~combout\ $end
+$var wire 1 I \ff3|Q~q\ $end
+$var wire 1 J \xor3|y~combout\ $end
+$var wire 1 K \ff4|Q~q\ $end
+$var wire 1 L \ff5|Q~feeder_combout\ $end
+$var wire 1 M \ff5|Q~q\ $end
+$var wire 1 N \xor4|y~combout\ $end
+$var wire 1 O \ff6|Q~q\ $end
+$var wire 1 P \ff7|Q~feeder_combout\ $end
+$var wire 1 Q \ff7|Q~q\ $end
+$var wire 1 R \ff8|Q~DUPLICATE_q\ $end
+$var wire 1 S \xor0|y~combout\ $end
+$var wire 1 T \ff1|Q~q\ $end
+$var wire 1 U \ff7|Q~DUPLICATE_q\ $end
+$var wire 1 V \ff8|ALT_INV_Q~DUPLICATE_q\ $end
+$var wire 1 W \ALT_INV_dIn~input_o\ $end
+$var wire 1 X \ff8|ALT_INV_Q~q\ $end
+$var wire 1 Y \ff6|ALT_INV_Q~q\ $end
+$var wire 1 Z \ff5|ALT_INV_Q~q\ $end
+$var wire 1 [ \ff4|ALT_INV_Q~q\ $end
+$var wire 1 \ \ff3|ALT_INV_Q~q\ $end
+$var wire 1 ] \ff2|ALT_INV_Q~q\ $end
+$var wire 1 ^ \ff1|ALT_INV_Q~q\ $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
 0!
-1"
-1#
-0$
-0%
-1&
-x'
-1(
-1)
-1*
+0"
 1+
-1,
+0,
 1-
-0.
-0/
+x.
+1/
 10
 11
-02
-03
-14
-x5
-$end
-#10000
-1!
-1/
 12
-#20000
-0!
-0"
-1$
-0/
-00
-1.
 13
-04
-02
-#30000
-1!
-1/
-12
+14
+05
+16
+07
+x@
+0A
+0B
+0C
+0D
+1E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+1V
+1W
+1X
+1Y
+1Z
+1[
+1\
+1]
+1^
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+0*
+$end
+#20000
+1"
+17
+1C
+0W
+1D
+1H
+1J
+1N
+1S
 #40000
-0!
-1"
-0/
-10
-14
-02
-#50000
-1!
-1/
-12
+0"
+07
+0C
+1W
+0D
+0H
+0J
+0N
+0S
 #60000
-0!
-0"
-0/
-00
-04
-02
-#70000
-1!
-1/
-12
+1"
+17
+1C
+0W
+1D
+1H
+1J
+1N
+1S
 #80000
-0!
-1"
-0/
-10
-14
-02
-#90000
-1!
-1/
-12
+0"
+07
+0C
+1W
+0D
+0H
+0J
+0N
+0S
 #100000
-0!
-0"
-0/
-00
-04
-02
-#110000
-1!
-1/
-12
+1"
+17
+1C
+0W
+1D
+1H
+1J
+1N
+1S
 #120000
-0!
-1"
-0/
-10
-14
-02
-#130000
-1!
-1/
-12
+0"
+07
+0C
+1W
+0D
+0H
+0J
+0N
+0S
 #140000
-0!
-0"
-0/
-00
-04
-02
-#150000
-1!
-1/
-12
+1"
+17
+1C
+0W
+1D
+1H
+1J
+1N
+1S
 #160000
-0!
-1"
-0/
-10
-14
-02
-#170000
-1!
-1/
-12
+0"
+07
+0C
+1W
+0D
+0H
+0J
+0N
+0S
 #180000
-0!
-0"
-0/
-00
-04
-02
-#190000
-1!
-1/
-12
+1"
+17
+1C
+0W
+1D
+1H
+1J
+1N
+1S
 #200000
-0!
-1"
-0/
-10
-14
-02
-#210000
-1!
-1/
-12
+0"
+07
+0C
+1W
+0D
+0H
+0J
+0N
+0S
 #220000
-0!
-0"
-0/
-00
-04
-02
-#230000
-1!
-1/
-12
+1"
+17
+1C
+0W
+1D
+1H
+1J
+1N
+1S
 #240000
-0!
-1"
-0/
-10
-14
-02
-#250000
-1!
-1/
-12
+0"
+07
+0C
+1W
+0D
+0H
+0J
+0N
+0S
 #260000
-0!
-0"
-0/
-00
-04
-02
-#270000
-1!
-1/
-12
+1"
+17
+1C
+0W
+1D
+1H
+1J
+1N
+1S
 #280000
-0!
-1"
-0/
-10
-14
-02
-#290000
-1!
-1/
-12
+0"
+07
+0C
+1W
+0D
+0H
+0J
+0N
+0S
 #300000
-0!
-0"
-0/
-00
-04
-02
-#310000
-1!
-1/
-12
+1"
+17
+1C
+0W
+1D
+1H
+1J
+1N
+1S
 #320000
-0!
-1"
-0/
-10
-14
-02
-#330000
-1!
-1/
-12
+0"
+07
+0C
+1W
+0D
+0H
+0J
+0N
+0S
 #340000
-0!
-0/
-02
-#350000
-1!
-1/
-12
-#360000
-0!
-0/
-02
-#370000
-1!
-1/
-12
-#380000
-0!
-0"
-0/
-00
-04
-02
-#390000
-1!
-1/
-12
-#400000
-0!
 1"
-0/
-10
-14
-02
-#410000
-1!
-1/
-12
-#420000
-0!
+17
+1C
+0W
+1D
+1H
+1J
+1N
+1S
+#400000
 0"
-0/
-00
-04
-02
-#430000
-1!
-1/
-12
+07
+0C
+1W
+0D
+0H
+0J
+0N
+0S
+#420000
+1"
+17
+1C
+0W
+1D
+1H
+1J
+1N
+1S
 #440000
-0!
-0/
-02
-#450000
-1!
-1/
-12
-#460000
-0!
-0/
-02
-#470000
-1!
-1/
-12
-#480000
-0!
-0/
-02
-#490000
-1!
-1/
-12
+0"
+07
+0C
+1W
+0D
+0H
+0J
+0N
+0S
 #500000
-0!
-0/
-02
-#510000
 1!
-1/
-12
+15
+1A
+1B
 #520000
 0!
-0/
-02
-#530000
-1!
-1/
-12
+0+
+05
+06
+0E
+0A
+0B
 #540000
-0!
-0/
-02
-#550000
-1!
-1/
-12
-#560000
-0!
-0/
-02
-#570000
-1!
-1/
-12
-#580000
-0!
-0/
-02
-#590000
-1!
-1/
-12
-#600000
-0!
-0/
-02
-#610000
-1!
-1/
-12
-#620000
-0!
-0/
-02
-#630000
-1!
-1/
-12
-#640000
-0!
-0/
-02
-#650000
-1!
-1/
-12
-#660000
-0!
-0/
-02
-#670000
-1!
-1/
-12
-#680000
-0!
-0/
-02
-#690000
-1!
-1/
-12
-#700000
-0!
-0/
-02
-#710000
-1!
-1/
-12
-#720000
-0!
-0/
-02
-#730000
-1!
-1/
-12
-#740000
-0!
-0/
-02
-#750000
-1!
-1/
-12
-#760000
-0!
-0/
-02
-#770000
-1!
-1/
-12
-#780000
-0!
-0/
-02
-#790000
-1!
-1/
-12
-#800000
-0!
-0/
-02
-#810000
-1!
-1/
-12
-#820000
-0!
-0/
-02
-#830000
-1!
-1/
-12
-#840000
-0!
-0/
-02
-#850000
-1!
-1/
-12
-#860000
-0!
-0/
-02
-#870000
-1!
-1/
-12
-#880000
-0!
-0/
-02
-#890000
-1!
-1/
-12
-#900000
-0!
-0/
-02
-#910000
-1!
-1/
-12
-#920000
-0!
-0/
-02
-#930000
-1!
-1/
-12
-#940000
-0!
-0/
-02
-#950000
-1!
-1/
-12
-#960000
-0!
-0/
-02
-#970000
-1!
-1/
-12
-#980000
-0!
-0/
-02
-#990000
-1!
-1/
-12
+1+
+16
+1E
 #1000000

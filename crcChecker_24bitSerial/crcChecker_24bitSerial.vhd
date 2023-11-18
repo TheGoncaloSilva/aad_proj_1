@@ -16,6 +16,9 @@ USE comparator.all;
 LIBRARY LinarFeedback_ShiftRegister;
 USE LinarFeedback_ShiftRegister.all;
 
+LIBRARY binCounter_5bit;
+USE binCounter_5bit.all;
+
 ENTITY crcChecker_24bitSerial IS
   PORT (nGRst: IN STD_LOGIC;
         clk:   IN STD_LOGIC;
