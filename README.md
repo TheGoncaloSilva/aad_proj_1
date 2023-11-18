@@ -40,8 +40,8 @@ $$
 * $\text{Encoded Message} = 100100001$
 * $Q(x) = 111101$ ($\text{Message}_{\text{bits}}-1 = 5 \text{bits}$)
 
-
 # Remainder Properties Optimization
+
 ## Introduction
 
 In the pursuit of optimizing error-detection codes, the use of remainder properties proves to be an effective strategy. This approach aims to reduce both the number of XOR operations and propagation delays, enhancing the overall efficiency of the parallel encoder. The following markdown chapter outlines the process of analyzing the original equations, implementing a script for optimization, and presenting the final optimized solution.
@@ -59,7 +59,6 @@ The original set of equations for the parallel encoder is represented by eight p
 * $r_1= a_0 \oplus a_3 \oplus a_4 \oplus a_5 \oplus a_6 \oplus a_7 \oplus a_8 \oplus a_9 \oplus a_{13} \oplus a_{15}$
 * $r_0= a_0 \oplus a_1 \oplus a_2 \oplus a_4 \oplus a_6 \oplus a_8 \oplus a_{13} \oplus a_{14}$
 
-
 ## Optimization Script
 
 To optimize the equations, a Python script named `crc_optimizer.py` was implemented. The script utilizes a ranking system that identifies XOR combinations occurring frequently and suggests their inclusion in the optimized equations. The user is prompted to provide new values for each bit layer, allowing for iterative optimization.
@@ -69,7 +68,6 @@ The script generates all possible pairs for each bit layer and finds the combina
 # Optimized XOR Combinations
 
 After an in-depth analysis and iterative optimization process using the `crc_optimizer.py` script, the parallel encoder's XOR combinations were successfully streamlined. The initial set of equations, involving 58 XOR operations, was refined to a more efficient configuration, reducing the number of XORs to 40. The optimized XOR combinations are organized into levels, reflecting the feedback stages within the system. The optimization successfully identifies and prioritizes the most frequent XOR patterns, significantly improving computational efficiency.
-
 
 ## Level 1
 
@@ -126,6 +124,7 @@ After an in-depth analysis and iterative optimization process using the `crc_opt
 These optimized XOR combinations contribute to a more efficient parallel encoder, reducing the computational load and propagation delays. The identification and prioritization of frequently occurring XOR patterns showcase the effectiveness of the optimization process, resulting in an enhanced error-detection code.
 
 ## Conclusion
+
 ### Summary:
 
 - **$r_7$:** $\text{XOR37}$ (finishes in 3 levels)
@@ -147,11 +146,10 @@ In this example, two levels of processing are needed. One where $(a_0 \oplus a_1
 
 The detailed simplifications conducted can be viewed in this [spreadsheet](https://docs.google.com/spreadsheets/d/1CsTB0bZz6s2GWEfCbEtgzzU8rn8X1ISSbtLjJZouMgA/edit?usp=sharing). This component was implemented using a **Parallel** implementation.
 
-
-
 # Checker
 
 The checker is a block that should take a 24-bit word and output one bit. This bit indicates if the message was received with (bit with value 1) or without errors (bit with value 0). Inherently the first 16 bits should represent the message itself and the following 8 bits, the computed CRC value. Considering the previous encoder example, assuming that we received the correct encoded message **100100001**, the **Division Algorithm** would do the following calculations:
+
 $$
 \begin{array}{rl}
 100100001 & \underline{|\phantom{0}1101} \\
@@ -174,8 +172,77 @@ Since the **remainder** of the division is $0$, the Message was received without
 
 ## Division Algorithm
 
-Observing the design principles, we chose to implement the  division algorithm, since this one allowed to have lower propagation delays and xor's. This component was implemented using a **bit-serial** implementation, so that means that a control unit was used. This control unit can store up to 32 entries and is supplied by a 5 bit binary counter. This is done to be able to hold 24 counting states **?** and another one for comparison **?**.
+Observing the design principles, we chose to implement the  division algorithm, since this one allowed to have lower propagation delays and xor's. This component was implemented using a **bit-serial** implementation, so that means that a control unit was used. This control unit can have up to 32 states and is supplied by a 5 bit binary counter. This is done to be able to hold 24 counting states and another one for comparison.
 
 THe algorithm itself by a **Linear Feedback Shift Registers**,which uses 8 Flip Flops and 5 Xor's. When the remainder is calculated, the result is read by our **Comparator** which compares essentially to $0$ (all the values are just **OR'ed**). The output of this block will indicate if there was any error.
 
+## Executing
 
+To test the results and input, the python script **`crc_checker.py`** can be used, both for testing a message with *CRC* or to calculate it. To execute the *VHDL* code, open the `crcChecker_24bitSerial` project, set the `crcChecker_24bitSerial.vhd` file as top-level hierarchy and compile te `control_simulation.vhd`. For other components use the same steps, just with the expected changes.
+
+## Components
+
+The **Checker** is comprised of four main components, the *Control Unit*, *Linear Feedback Shift Register* and the *Comparator*. Most of this components were adapted from the ones supplied in class.
+
+### Control Unit
+
+As referred above, this component only changed the possible states and the downsize to 5 bits instead of 6. The **Control Unit** uses 24 states for processing of the values supplied by the user and another for comparing the values and outputting if the error occurred. This component **4 NAND, 1  NOR and 1 Memory Counter**. The diagram of this component is:
+
+![Control Unit diagram](controlUnit_diagram.png)
+
+Simulating we can see the value of the signals:
+
+![Control Unit Simulation](controlUnit_simulation.png)
+
+### Linear Feedback Shift Register
+
+This is the main component of the project, it implements the division algorithm by the $b(x) = x^8 + x^7 + x^5 + x^2 + x + 1$. This component used **5 XORS** and **8 FLIP-FLOP D PET** (similar to a regular *DFlip-Flop* but includes additional inputs for asynchronous set and reset. These extra inputs allow to force the flip-flop output to a known state regardless of the clock signal). The sketch diagram of this component is:
+
+![LFSR sketch](lfsr_sketch.png)
+
+The diagram of this component is:
+
+![LFSR rtl](lfsr_rtl.png)
+
+### Comparator
+
+The **Comparator** is a simple component that takes a 8-bit signal and compares all bits to 0:
+
+* at least one bit is `1` -> output is 1
+* all bits are at `0` -> output is 0
+  The diagram of this component is:
+
+![Comparator diagram](comparator_rtl.png)
+
+## Full Architecture
+
+Joining all this components together, we reach the full system, with the components:
+
+* 1 - LFSR
+  * 8 - Flip-Flop D PET
+  * 5 - XOR's
+* 1 - 5-bit Binary Counter
+  * 5 - Flip-Flop D PET
+  * 4 - XOR's
+  * 3 - AND's
+* 1 - Control Unit
+  * 4 - NAND's
+  * 1 - NOR
+* 1 - Comparator to `0`
+  * 8 OR's
+* 1 - Flip-Flop D PET
+
+The diagram os this component is:
+![checker rtl](checker_rtl.png)
+
+Simulating the values:
+
+* $\text{Message1} = 101010101010101011101000$
+  * **Result** is `0`
+* $\text{Message2} = 100111101001011100011110$
+  * **Result** is `0`
+* $\text{Message2} = 101010101000101011101000$
+  * **Result** is `1`
+    We can observe that our **Checker** performs as expected:
+
+![checker simulation](checker_simulation.png)

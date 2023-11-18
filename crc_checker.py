@@ -22,40 +22,34 @@ def calculate_crc(data: str, key: str) -> str:
 ax: str = '100100' # data without CRC
 bx: str = '1101' # key
 crc: str = calculate_crc(ax, bx)
-print(f"CRC Remainder: {crc}") # should be 001
+print(f"Calculate CRC: {crc}") # should be 001
 
 # Check crc 1
 ax: str = '100100001' # data with CRC
 bx: str = '1101' # key
 res: str = check_crc(ax, bx)
-print(f"CRC Remainder: {res}") # should be 0
+print(f"Check CRC: {res}") # should be 0
 
 # Calculate crc 2
 ax: str = '1010101010101010' # data without CRC
 bx: str = '110100111' # key
 crc: str = calculate_crc(ax, bx)
-print(f"CRC Remainder: {crc}") # should be 11101000
-
-# Check crc 2
-ax: str = '101010101010101001110100' # data with CRC
-bx: str = '110100111' # key
-res: str = check_crc(ax, bx)
-print(f"CRC Remainder: {res}") # should be 0
+print(f"Calculate CRC: {crc}") # should be 11101000
 
 # Calculate crc 3
 ax: str = '1001111010010111' # data without CRC
 bx: str = '110100111' # key
 crc: str = calculate_crc(ax, bx)
-print(f"CRC Remainder: {crc}") # should be 00011110
+print(f"Calculate CRC: {crc}") # should be 00011110
 
 # Check crc 3
 ax: str = '100111101001011100011110' # data with CRC
 bx: str = '110100111' # key
 res: str = check_crc(ax, bx)
-print(f"CRC Remainder: {res}") # should be 0
+print(f"Check CRC: {res}") # should be 0
 
 # Calculate crc 4
 ax: str = '01010101010101010101100' # data without CRC
 bx: str = '110100111' # key
 crc: str = calculate_crc(ax, bx)
-print(f"CRC Remainder: {crc}") # should be 00011110
+print(f"Calculate CRC: {crc}") # should be 00011110
