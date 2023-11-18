@@ -1,46 +1,3 @@
-/*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off crcChecker_24bitSerial -c crcChecker_24bitSerial --vector_source="/home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/Waveform4.vwf" --testbench_file="/home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simulation/qsim/Waveform4.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off crcChecker_24bitSerial -c crcChecker_24bitSerial --vector_source="/home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/Waveform4.vwf" --testbench_file="/home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simulation/qsim/Waveform4.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simulation/qsim/" crcChecker_24bitSerial -c crcChecker_24bitSerial</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="/home/catarina/Documents/GitHub/aad_proj_1/crcChecker_24bitSerial/simulation/qsim/" crcChecker_24bitSerial -c crcChecker_24bitSerial</tnetlist_cmd>
-<modelsim_script>onerror {exit -code 1}
-vlib work
-vcom -work work crcChecker_24bitSerial.vho
-vcom -work work Waveform4.vwf.vht
-vsim  -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.LinarFeedback_ShiftRegister_vhd_vec_tst
-vcd file -direction crcChecker_24bitSerial.msim.vcd
-vcd add -internal LinarFeedback_ShiftRegister_vhd_vec_tst/*
-vcd add -internal LinarFeedback_ShiftRegister_vhd_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-</modelsim_script>
-<modelsim_script_timing>onerror {exit -code 1}
-vlib work
-vcom -work work crcChecker_24bitSerial.vho
-vcom -work work Waveform4.vwf.vht
-vsim -novopt -c -t 1ps -sdfmax LinarFeedback_ShiftRegister_vhd_vec_tst/i1=crcChecker_24bitSerial_vhd.sdo -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.LinarFeedback_ShiftRegister_vhd_vec_tst
-vcd file -direction crcChecker_24bitSerial.msim.vcd
-vcd add -internal LinarFeedback_ShiftRegister_vhd_vec_tst/*
-vcd add -internal LinarFeedback_ShiftRegister_vhd_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-</modelsim_script_timing>
-<hdl_lang>vhdl</hdl_lang>
-</simulation_settings>*/
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -203,9 +160,10 @@ TRANSITION_LIST("clk")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 100;
-			LEVEL 0 FOR 5.0;
-			LEVEL 1 FOR 5.0;
+			REPEAT = 1;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 480.0;
 		}
 	}
 }
@@ -215,11 +173,31 @@ TRANSITION_LIST("dIn")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 920.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 60.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 560.0;
+		}
 	}
 }
 
@@ -228,7 +206,11 @@ TRANSITION_LIST("dOut[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -237,7 +219,11 @@ TRANSITION_LIST("dOut[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -246,7 +232,11 @@ TRANSITION_LIST("dOut[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -255,7 +245,11 @@ TRANSITION_LIST("dOut[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -264,7 +258,11 @@ TRANSITION_LIST("dOut[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -273,7 +271,11 @@ TRANSITION_LIST("dOut[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -282,7 +284,11 @@ TRANSITION_LIST("dOut[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -291,7 +297,11 @@ TRANSITION_LIST("dOut[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -300,13 +310,15 @@ TRANSITION_LIST("nGRst")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 1 FOR 520.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 460.0;
 	}
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "clk";
+	CHANNEL = "dIn";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -315,7 +327,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "dIn";
+	CHANNEL = "clk";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;

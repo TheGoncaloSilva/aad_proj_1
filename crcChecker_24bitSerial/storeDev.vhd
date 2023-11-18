@@ -28,25 +28,3 @@ BEGIN
 	 END IF;
   END PROCESS;
 END behavior;
-
------- Flip Flop D --------
-LIBRARY ieee;
-USE ieee.std_logic_1164.all;
-
-entity FlipFlopD is 
-   port(clk  : in std_logic;   
-			rst : in std_logic;
-			d   : in  std_logic;
-			Q   : out std_logic);
-end FlipFlopD;
-architecture structure of FlipFlopD is  
-begin  
-     process(clk, rst)
-     begin 
-	    if (rst = '0') then
-		    Q <= '0';
-        elsif(rising_edge(clk)) then
-	        Q <= d; 
-        end if;       
-     end process;  
-end structure; 

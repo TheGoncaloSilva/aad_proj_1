@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/17/2023 23:57:14"
+-- Generated on "11/18/2023 11:37:03"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          LinarFeedback_ShiftRegister
 -- 
@@ -37,13 +37,13 @@ ARCHITECTURE LinarFeedback_ShiftRegister_arch OF LinarFeedback_ShiftRegister_vhd
 SIGNAL clk : STD_LOGIC;
 SIGNAL dIn : STD_LOGIC;
 SIGNAL dOut : STD_LOGIC_VECTOR(7 DOWNTO 0);
-SIGNAL nGRst : STD_LOGIC;
+SIGNAL rst : STD_LOGIC;
 COMPONENT LinarFeedback_ShiftRegister
 	PORT (
 	clk : IN STD_LOGIC;
 	dIn : IN STD_LOGIC;
 	dOut : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	nGRst : IN STD_LOGIC
+	rst : IN STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
@@ -53,7 +53,7 @@ BEGIN
 	clk => clk,
 	dIn => dIn,
 	dOut => dOut,
-	nGRst => nGRst
+	rst => rst
 	);
 
 -- dIn
@@ -113,15 +113,4 @@ BEGIN
 	clk <= '0';
 WAIT;
 END PROCESS t_prcs_clk;
-
--- nGRst
-t_prcs_nGRst: PROCESS
-BEGIN
-	nGRst <= '1';
-	WAIT FOR 520000 ps;
-	nGRst <= '0';
-	WAIT FOR 20000 ps;
-	nGRst <= '1';
-WAIT;
-END PROCESS t_prcs_nGRst;
 END LinarFeedback_ShiftRegister_arch;

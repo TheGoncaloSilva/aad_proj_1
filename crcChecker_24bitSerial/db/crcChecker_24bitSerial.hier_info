@@ -1,4 +1,196 @@
-|LinarFeedback_ShiftRegister
+|crcChecker_24bitSerial
+nGRst => control:con.nGRst
+clk => binCounter_5bit:bc.clk
+clk => control:con.clk
+clk => LinarFeedback_ShiftRegister:lsfr.clk
+dIn => LinarFeedback_ShiftRegister:lsfr.dIn
+err << flipFlopDPET:ffP.Q
+
+
+|crcChecker_24bitSerial|binCounter_5bit:bc
+nRst => flipFlopDPET:ff0.nRst
+nRst => flipFlopDPET:ff1.nRst
+nRst => flipFlopDPET:ff2.nRst
+nRst => flipFlopDPET:ff3.nRst
+nRst => flipFlopDPET:ff4.nRst
+clk => flipFlopDPET:ff0.clk
+clk => flipFlopDPET:ff1.clk
+clk => flipFlopDPET:ff2.clk
+clk => flipFlopDPET:ff3.clk
+clk => flipFlopDPET:ff4.clk
+c[0] <= flipFlopDPET:ff0.Q
+c[1] <= flipFlopDPET:ff1.Q
+c[2] <= flipFlopDPET:ff2.Q
+c[3] <= flipFlopDPET:ff3.Q
+c[4] <= flipFlopDPET:ff4.Q
+
+
+|crcChecker_24bitSerial|binCounter_5bit:bc|gateAnd2:ad1
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|binCounter_5bit:bc|gateAnd2:ad2
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|binCounter_5bit:bc|gateAnd2:ad3
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|binCounter_5bit:bc|gateXor2:xr1
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|binCounter_5bit:bc|gateXor2:xr2
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|binCounter_5bit:bc|gateXor2:xr3
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|binCounter_5bit:bc|gateXor2:xr4
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|binCounter_5bit:bc|flipFlopDPET:ff0
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|binCounter_5bit:bc|flipFlopDPET:ff1
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|binCounter_5bit:bc|flipFlopDPET:ff2
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|binCounter_5bit:bc|flipFlopDPET:ff3
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|binCounter_5bit:bc|flipFlopDPET:ff4
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|control:con
+nGRst => gateNand2:nad1.x1
+nGRst => gateNand2:nad3.x1
+clk => gateNand2:nad2.x1
+clk => gateNand2:nad4.x1
+clk => gateNor2:nord.x1
+add[0] => contMem:cMem.add[0]
+add[1] => contMem:cMem.add[1]
+add[2] => contMem:cMem.add[2]
+add[3] => contMem:cMem.add[3]
+add[4] => contMem:cMem.add[4]
+nRst <= gateNand2:nad2.y
+nSetO <= gateNand2:nad4.y
+clkO <= gateNor2:nord.y
+
+
+|crcChecker_24bitSerial|control:con|contMem:cMem
+add[0] => prog.RADDR
+add[1] => prog.RADDR1
+add[2] => prog.RADDR2
+add[3] => prog.RADDR3
+add[4] => prog.RADDR4
+dOut[0] <= prog.DATAOUT
+dOut[1] <= prog.DATAOUT1
+dOut[2] <= prog.DATAOUT2
+
+
+|crcChecker_24bitSerial|control:con|gateNand2:nad1
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|control:con|gateNand2:nad2
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|control:con|gateNand2:nad3
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|control:con|gateNand2:nad4
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|control:con|gateNor2:nord
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr
+clk => flipFlopDPET:ff0.clk
 clk => flipFlopDPET:ff1.clk
 clk => flipFlopDPET:ff2.clk
 clk => flipFlopDPET:ff3.clk
@@ -6,57 +198,56 @@ clk => flipFlopDPET:ff4.clk
 clk => flipFlopDPET:ff5.clk
 clk => flipFlopDPET:ff6.clk
 clk => flipFlopDPET:ff7.clk
-clk => flipFlopDPET:ff8.clk
-nGRst => flipFlopDPET:ff1.nRst
-nGRst => flipFlopDPET:ff2.nRst
-nGRst => flipFlopDPET:ff3.nRst
-nGRst => flipFlopDPET:ff4.nRst
-nGRst => flipFlopDPET:ff5.nRst
-nGRst => flipFlopDPET:ff6.nRst
-nGRst => flipFlopDPET:ff7.nRst
-nGRst => flipFlopDPET:ff8.nRst
-dIn => gateXor2:xor0.x2
-dOut[0] <= flipFlopDPET:ff1.Q
-dOut[1] <= flipFlopDPET:ff2.Q
-dOut[2] <= flipFlopDPET:ff3.Q
+rst => flipFlopDPET:ff0.nRst
+rst => flipFlopDPET:ff1.nRst
+rst => flipFlopDPET:ff2.nRst
+rst => flipFlopDPET:ff3.nRst
+rst => flipFlopDPET:ff4.nRst
+rst => flipFlopDPET:ff5.nRst
+rst => flipFlopDPET:ff6.nRst
+rst => flipFlopDPET:ff7.nRst
+dIn => gateXor2:xor0.x1
+dOut[0] <= flipFlopDPET:ff7.Q
+dOut[1] <= flipFlopDPET:ff6.Q
+dOut[2] <= flipFlopDPET:ff5.Q
 dOut[3] <= flipFlopDPET:ff4.Q
-dOut[4] <= flipFlopDPET:ff5.Q
-dOut[5] <= flipFlopDPET:ff6.Q
-dOut[6] <= flipFlopDPET:ff7.Q
-dOut[7] <= flipFlopDPET:ff8.Q
+dOut[4] <= flipFlopDPET:ff3.Q
+dOut[5] <= flipFlopDPET:ff2.Q
+dOut[6] <= flipFlopDPET:ff1.Q
+dOut[7] <= flipFlopDPET:ff0.Q
 
 
-|LinarFeedback_ShiftRegister|gateXor2:xor0
+|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|gateXor2:xor0
 x1 => y.IN0
 x2 => y.IN1
 y <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LinarFeedback_ShiftRegister|gateXor2:xor1
+|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|gateXor2:xor1
 x1 => y.IN0
 x2 => y.IN1
 y <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LinarFeedback_ShiftRegister|gateXor2:xor2
+|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|gateXor2:xor2
 x1 => y.IN0
 x2 => y.IN1
 y <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LinarFeedback_ShiftRegister|gateXor2:xor3
+|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|gateXor2:xor3
 x1 => y.IN0
 x2 => y.IN1
 y <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LinarFeedback_ShiftRegister|gateXor2:xor4
+|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|gateXor2:xor4
 x1 => y.IN0
 x2 => y.IN1
 y <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LinarFeedback_ShiftRegister|flipFlopDPET:ff1
+|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|flipFlopDPET:ff0
 clk => nQ~reg0.CLK
 clk => Q~reg0.CLK
 D => Q~reg0.DATAIN
@@ -69,7 +260,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LinarFeedback_ShiftRegister|flipFlopDPET:ff2
+|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|flipFlopDPET:ff1
 clk => nQ~reg0.CLK
 clk => Q~reg0.CLK
 D => Q~reg0.DATAIN
@@ -82,7 +273,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LinarFeedback_ShiftRegister|flipFlopDPET:ff3
+|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|flipFlopDPET:ff2
 clk => nQ~reg0.CLK
 clk => Q~reg0.CLK
 D => Q~reg0.DATAIN
@@ -95,7 +286,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LinarFeedback_ShiftRegister|flipFlopDPET:ff4
+|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|flipFlopDPET:ff3
 clk => nQ~reg0.CLK
 clk => Q~reg0.CLK
 D => Q~reg0.DATAIN
@@ -108,7 +299,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LinarFeedback_ShiftRegister|flipFlopDPET:ff5
+|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|flipFlopDPET:ff4
 clk => nQ~reg0.CLK
 clk => Q~reg0.CLK
 D => Q~reg0.DATAIN
@@ -121,7 +312,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LinarFeedback_ShiftRegister|flipFlopDPET:ff6
+|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|flipFlopDPET:ff5
 clk => nQ~reg0.CLK
 clk => Q~reg0.CLK
 D => Q~reg0.DATAIN
@@ -134,7 +325,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LinarFeedback_ShiftRegister|flipFlopDPET:ff7
+|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|flipFlopDPET:ff6
 clk => nQ~reg0.CLK
 clk => Q~reg0.CLK
 D => Q~reg0.DATAIN
@@ -147,7 +338,74 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LinarFeedback_ShiftRegister|flipFlopDPET:ff8
+|crcChecker_24bitSerial|LinarFeedback_ShiftRegister:lsfr|flipFlopDPET:ff7
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|comparator:comp
+dIn[0] => gateOr2:or1.x1
+dIn[1] => gateOr2:or1.x2
+dIn[2] => gateOr2:or2.x1
+dIn[3] => gateOr2:or3.x1
+dIn[4] => gateOr2:or4.x1
+dIn[5] => gateOr2:or5.x1
+dIn[6] => gateOr2:or6.x1
+dIn[7] => gateOr2:or7.x1
+dOut <= gateOr2:or7.y
+
+
+|crcChecker_24bitSerial|comparator:comp|gateOr2:or1
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|comparator:comp|gateOr2:or2
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|comparator:comp|gateOr2:or3
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|comparator:comp|gateOr2:or4
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|comparator:comp|gateOr2:or5
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|comparator:comp|gateOr2:or6
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|comparator:comp|gateOr2:or7
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crcChecker_24bitSerial|flipFlopDPET:ffP
 clk => nQ~reg0.CLK
 clk => Q~reg0.CLK
 D => Q~reg0.DATAIN
